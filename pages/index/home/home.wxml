@@ -1,0 +1,74 @@
+<view class="swiper__index">
+  <!-- <view style="{{'height: ' + statusBarHeight }}"></view> -->
+  <view style="{{'height: ' + statusBarHeight + ';top:'+statusBarHeight}}" class="swiper__index__navbar">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        <block wx:if="{{current}}">{{current.name}}</block>
+        <block wx:else bindtap="goLogin">请先登录</block>
+        <image src="/images/icon/arrow1.png"></image>
+      </view>
+    </picker>
+
+  </view>
+  <swiper class="screen-swiper square-dot swiper__index__content" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{swiperList}}" wx:key bindtap="goLunboDetail" data-id="{{item.id}}">
+      <image src="{{item.imageUrl}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="index-content">
+  <view class="app">
+    <view class="app--inform solid-bottom">
+      <image src="/images/icon/icon_tongzhi.png"></image>
+      <text>通知公告的内容放在这里</text>
+    </view>
+    <view class="app-container">
+      <view class="app-container__item" bindtap="tapToOpen">
+        <image src="/images/icon/icon_zhkm.png" class="app-container__item__img" />
+        <view class="app-container__item__text">
+          <view class="font">智慧开门</view>
+          <view class="font-sm mt-1 text-secondary">手机控制门锁</view>
+        </view>
+      </view>
+      <view class="app-container__item" bindtap="tapToSecurity">
+        <image src="/images/icon/icon_zhaf.png" class="app-container__item__img" />
+        <view class="app-container__item__text">
+          <view class="font">智慧安防</view>
+          <view class="font-sm mt-1 text-secondary">实时监控保卫</view>
+        </view>
+      </view>
+      <view class="app-container__item" bindtap="tapToParking">
+        <image src="/images/icon/icon_sqtc.png" class="app-container__item__img" />
+        <view class="app-container__item__text">
+          <view class="font">社区停车</view>
+          <view class="font-sm mt-1 text-secondary">快速寻找车位</view>
+        </view>
+      </view>
+      <view class="app-container__item" bindtap="tapToGuibin">
+        <image src="/images/icon/wyfw.png" class="app-container__item__img" />
+        <view class="app-container__item__text">
+          <view class="font">物业服务</view>
+          <view class="font-sm mt-1 text-secondary">物业报修缴费</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mszx justify-between">
+    <view class="font-weight-bold">民生资讯</view>
+    <view class="gray" bindtap="getAllInfo">查看全部</view>
+  </view>
+  <view class="card">
+    <view class="card__content" bindtap="goDetail" wx:for="{{infoList}}" data-id="{{item.id}}" wx:key>
+      <view style="width: 200rpx; height: 160rpx;">
+        <image src="{{item.imageUrl}}" class="card__content__img" mode="aspectFill">
+        </image>
+      </view>
+      <view class="card__content__desc">
+        <view class="card__desc__text1">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='cu-tabbar-height'></view>

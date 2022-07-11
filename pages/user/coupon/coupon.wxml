@@ -1,0 +1,59 @@
+<!--pages/user/coupon/coupon.wxml-->
+<!-- 优惠卷 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex justify-between px-10 text-center">
+    <view class='cu-item {{currentData == 0 ? "text-orange cur" : ""}}' data-current="0" bindtap="checkCurrent">
+      可用
+    </view>
+    <view class='cu-item {{currentData == 1 ? "text-orange cur" : ""}}' data-current="1" bindtap="checkCurrent">
+      过期
+    </view>
+  </view>
+  <!-- 页面 -->
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <!-- 可用优惠卷 -->
+    <swiper-item wx:if="{{available.length === 0}}" class="text-center">
+      <image src="/images/img/数据为空.png" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item wx:else>
+      <view class="shadow flex available" wx:for="{{available}}" wx:key="id">
+        <view class="m-2 text-white">
+          <view class="text-xl ml-5 ">￥
+            <text class="h2">{{item.money}}</text>
+          </view>
+          <view class="font-xl ml-4">{{item.purpose}}</view>
+        </view>
+        <view class="text-gray available__name">
+          <view class="m-3">{{item.name}}</view>
+          <view class="m-3">
+            <text>{{item.startTime}}</text>
+            至
+            <text>{{item.endTime}}</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <!-- 过期优惠卷 -->
+    <swiper-item wx:if="{{available.length === 0}}" class="text-center">
+      <image src="/images/img/数据为空.png" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item wx:else>
+      <view class="shadow flex overdue" wx:for="{{overdue}}" wx:key="id">
+        <view class="m-2 text-white">
+          <view class="text-xl ml-5 ">￥
+            <text class="h2">{{item.money}}</text>
+          </view>
+          <view class="font-xl ml-4">{{item.purpose}}</view>
+        </view>
+        <view class="text-gray overdue__name">
+          <view class="m-3">{{item.name}}</view>
+          <view class="m-3">
+            <text>{{item.startTime}}</text>
+            至
+            <text>{{item.endTime}}</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</scroll-view>

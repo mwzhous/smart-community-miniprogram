@@ -1,0 +1,67 @@
+<!--pages/user/kaipiaocontent/kaipiaocontent.wxml-->
+<view class="py-1 bg-white" style="margin-top: 10rpx; margin-left: 20rpx; margin-right: 20rpx;padding-top: 20rpx;">
+  <image src="/images/icon/icon_shijian.png" style="width: 15rpx;margin-left: 35rpx;" mode="widthFix"></image>
+  <text class="text-sm ml-2" style=" padding-top: -60rpx;">2019.06.25 16:59</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx; margin-top: 10rpx;color: #bab9ba;">已开票</text>
+  <view style="margin-left: 35rpx; margin-top: 20rpx; color: #bdbdbd;">电子发票</view>
+<view style="padding-bottom: 20rpx;margin-top: -10rpx;">
+  <view style="color: #bab9ba; margin-left: 35rpx; margin-top: 20rpx;">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</view>
+  <text class="text-lg" style="position: absolute; right: 0;margin-right: 70rpx;margin-top: -40rpx;">0.01</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx;margin-top: -37rpx;color: #c0c0c0;">元</text>
+</view>
+</view>
+<view class="py-1 bg-white" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;padding-top: 20rpx;">
+  <image src="/images/icon/icon_shijian.png" style="width: 15rpx;margin-left: 35rpx;" mode="widthFix"></image>
+  <text class="text-sm ml-2" style=" padding-top: -60rpx;">2019.06.25 16:59</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx; margin-top: 10rpx;color: #bab9ba;">已开票</text>
+  <view style="margin-left: 35rpx; margin-top: 20rpx; color: #bdbdbd;">电子发票</view>
+<view style="padding-bottom: 20rpx;margin-top: -10rpx;">
+  <view style="color: #bab9ba; margin-left: 35rpx; margin-top: 20rpx;">33</view>
+  <text class="text-lg" style="position: absolute; right: 0;margin-right: 70rpx;margin-top: -40rpx;">0.01</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx;margin-top: -37rpx;color: #c0c0c0;">元</text>
+</view>
+</view>
+<view class="py-1 bg-white" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;padding-top: 20rpx;">
+  <image src="/images/icon/icon_shijian.png" style="width: 15rpx;margin-left: 35rpx;" mode="widthFix"></image>
+  <text class="text-sm ml-2" style=" padding-top: -60rpx;">2019.06.25 16:59</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx; margin-top: 10rpx;color: #bab9ba;">已开票</text>
+  <view style="margin-left: 35rpx; margin-top: 20rpx; color: #bdbdbd;">纸质发票</view>
+<view style="padding-bottom: 20rpx;margin-top: -10rpx;">
+  <view style="color: #bab9ba; margin-left: 35rpx; margin-top: 20rpx;">33</view>
+  <text class="text-lg" style="position: absolute; right: 0;margin-right: 70rpx;margin-top: -40rpx;">0.01</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx;margin-top: -37rpx;color: #c0c0c0;">元</text>
+</view>
+</view>
+<view class="py-1 bg-white" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;padding-top: 20rpx;">
+  <image src="/images/icon/icon_shijian.png" style="width: 15rpx;margin-left: 35rpx;" mode="widthFix"></image>
+  <text class="text-sm ml-2" style=" padding-top: -60rpx;">2019.06.25 16:59</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx; margin-top: 10rpx;color: #bab9ba;">已开票</text>
+  <view style="margin-left: 35rpx; margin-top: 20rpx; color: #bdbdbd;">纸质发票</view>
+<view style="padding-bottom: 20rpx;margin-top: -10rpx;">
+  <view style="color: #bab9ba; margin-left: 35rpx; margin-top: 20rpx;">发票生成</view>
+  <text class="text-lg" style="position: absolute; right: 0;margin-right: 70rpx;margin-top: -40rpx;">0.01</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx;margin-top: -37rpx;color: #c0c0c0;">元</text>
+</view>
+</view>
+<view class="py-1 bg-white" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;padding-top: 20rpx;">
+  <image src="/images/icon/icon_shijian.png" style="width: 15rpx;margin-left: 35rpx;" mode="widthFix"></image>
+  <text class="text-sm ml-2" style=" padding-top: -60rpx;">2019.06.25 16:59</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx; margin-top: 10rpx;color: #bab9ba;">已开票</text>
+  <view style="margin-left: 35rpx; margin-top: 20rpx; color: #bdbdbd;">电子发票</view>
+<view style="padding-bottom: 20rpx;margin-top: -10rpx;">
+  <view style="color: #bab9ba; margin-left: 35rpx; margin-top: 20rpx;">测试一条数据</view>
+  <text class="text-lg" style="position: absolute; right: 0;margin-right: 70rpx;margin-top: -40rpx;">0.02</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx;margin-top: -37rpx;color: #c0c0c0;">元</text>
+</view>
+</view>
+<view class="py-1 bg-white" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;padding-top: 20rpx;">
+  <image src="/images/icon/icon_shijian.png" style="width: 15rpx;margin-left: 35rpx;" mode="widthFix"></image>
+  <text class="text-sm ml-2" style=" padding-top: -60rpx;">2019.06.25 16:59</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx; margin-top: 10rpx;color: #bab9ba;">已开票</text>
+  <view style="margin-left: 35rpx; margin-top: 20rpx; color: #bdbdbd;">电子发票</view>
+<view style="padding-bottom: 20rpx;margin-top: -10rpx;">
+  <view style="color: #bab9ba; margin-left: 35rpx; margin-top: 20rpx;">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</view>
+  <text class="text-lg" style="position: absolute; right: 0;margin-right: 70rpx;margin-top: -40rpx;">0.01</text>
+  <text class="text-sm" style="position: absolute; right: 0;margin-right: 50rpx;margin-top: -37rpx;color: #c0c0c0;">元</text>
+</view>
+</view>

@@ -1,0 +1,90 @@
+.start_1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    // background-color: red;
+}
+.start-title{
+    width: 800rpx;
+    height: 800rpx;
+    display: flex;
+    position: absolute;
+    font-family: 楷体;
+    font-weight: 50rpx;
+}
+.title-left{
+    width: 380rpx;
+    height: 380rpx;
+    writing-mode: vertical-rl;
+    // background-color: orange;
+    margin-top: 300rpx;
+    letter-spacing:4rpx;
+    color: #f17a1b;
+    font-size: 39rpx;
+}
+.title-right{
+    width:370rpx;
+    height: 370rpx;
+    // writing-mode: vertical-rl;
+    position: relative;
+    top: 256rpx;
+    left: 30rpx;
+    // background-color: red;
+    font-size: 39rpx;
+}
+.title-right-top{
+    writing-mode: vertical-rl;
+    letter-spacing:4rpx;
+    color: #f17a1b;
+    font-size: 39rpx;
+}
+span{
+    color:orange;
+    font-size: 39rpx;
+}
+.start_bottom_Img{
+    width: 300rpx;
+    height: 230rpx;
+    margin-bottom: 15rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:-60rpx;
+    margin-top:200rpx;
+    // background-color: red;
+}
+image{
+    width: 155rpx;
+    height: 155rpx;
+    // background-color: green;
+}
+.start_fulailai_title{
+    width: 220rpx;
+    height: 230rpx;
+    // background-color: orange;
+    font-family: 黑体;
+}
+.start_fulailai_title .start_fulailai text:nth-child(1){
+   font-size: 40rpx;
+    margin-left: 16rpx;
+}
+.start_fulailai_title .start_fulailai text:nth-child(2){
+    display: flex;
+    font-size: 16rpx;
+    margin-left: 22rpx;
+    margin-bottom: 20rpx;
+}
+.start_property{
+    // background-color: red;
+    width: 160rpx;
+    height: 50rpx;
+    // margin-top: 340rpx;
+    text-align: center;
+    font-size: 39rpx;
+    border: 1rpx solid #d7d7d7;
+    line-height: 50rpx;
+
+}
+
+
+

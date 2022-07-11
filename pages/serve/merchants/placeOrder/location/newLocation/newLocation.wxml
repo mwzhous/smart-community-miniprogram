@@ -1,0 +1,36 @@
+<!--pages/serve/merchants/placeOrder/location/newLocation/newLocation.wxml-->
+<view class="bg-white  mt-2 m-3 shadow">
+    <view class="cu-form-group">
+        <view class="title">用户名</view>
+        <input bindinput="bindusername" placeholder="请输入用户名" class="text-right" />
+    </view>
+    <view class="cu-form-group">
+        <view class="title">手机号</view>
+        <input bindinput="bindphone" placeholder="请输入手机号" class="text-right" />
+    </view>
+    <view class="cu-form-group bg-white">
+        <view class="title">地址</view>
+        <picker mode="region" bindchange="RegionChange" value="{{address}}" custom-item="{{customItem}}">
+            <view class="picker">
+                {{address}}
+            </view>
+        </picker>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">详细地址</view>
+        <input bindinput="bindaddress" placeholder="请输入详细地址" class="text-right" />
+    </view>
+    <view class="cu-form-group">
+        <view class="title">地址标签</view>
+        <input bindinput="bindaddresstag" placeholder="请输入地址标签" class="text-right" />
+    </view>
+    <view class="cu-form-group">
+        <view class="title">是否为默认地址</view>
+        <view class="action">
+        <switch class="sm" bindchange="SetShadow"></switch>
+      </view>
+    </view>
+</view>
+<view class="p-1">
+    <button class="btn-primary" bindtap="pushlocation">保存</button>
+</view>

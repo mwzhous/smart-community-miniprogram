@@ -1,0 +1,48 @@
+<!--pages/index/property-service/property-service.wxml-->
+<view class="down color-blue">
+  <view class="up bg-white"  bindtap="tapToPay">
+    <view>
+      <image src="../../../images/icon/icon_wuyejiaofei.png" />
+    </view>
+    <view class="wenzi">
+      <text class="font-md font-weight-bold">物业缴费</text>
+      <view class="text-secondary">在线缴费</view>
+    </view>
+  </view>
+</view>
+
+<view class="down color-pink">
+  <view class="up bg-white" bindtap="tapToRepairs">
+    <view>
+      <image src="../../../images/icon/icon_zaixianbaoxiu.png" />
+    </view>
+    <view class="wenzi">
+      <text class="font-md font-weight-bold">在线报修</text>
+      <view class="text-secondary">快速报修</view>
+    </view>
+  </view>
+</view>
+
+<view class="down color-green">
+  <view class="up bg-white" bindtap="tapToActivity">
+    <view>
+      <image src="../../../images/icon/icon_shequhuodong.png" />
+    </view>
+    <view class="wenzi" bindtap="goServeAbility">
+      <text class="font-md font-weight-bold">社区活动</text>
+      <view class="text-secondary">活动投票</view>
+    </view>
+  </view>
+</view>
+
+<view class="down color-qblue">
+  <view class="up bg-white" bindtap="tapToComplaints">
+    <view>
+      <image src="../../../images/icon/icon_tousujianyi.png" />
+    </view>
+    <view class="wenzi">
+      <text class="font-md font-weight-bold">投诉建议</text>
+      <view class="text-secondary">意见反馈</view>
+    </view>
+  </view>
+</view>

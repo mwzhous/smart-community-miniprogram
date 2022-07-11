@@ -1,0 +1,62 @@
+<!--pages/user/home/personalData/personalData.wxml-->
+<!-- 个人资料 -->
+<view class="cu-list menu">
+  <view class="flex bg-white px-3 py-2 align-center">
+    <text class="flex-1">头像</text>
+    <image bindtap="ChooseImage" class="rounded-50 avatar" bindinput="bindavatar" src="{{userInfo.avatar}}"></image>
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text>用户名</text>
+      <input class="message text-content" style="text-align: right;" placeholder-style="color:#b6b6b6;" bindinput="binduseranme" value="{{userInfo.account}}" />
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text>姓名</text>
+      <input class="message text-content" style="text-align: right;" placeholder-style="color:#b6b6b6;" bindinput="bindaccount" value="{{userInfo.username}}" />
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content flex align-center">
+      <text class="flex-1">性别</text>
+      <picker class="text-content message mb-4" value="{{index}}" range="{{gender}}" bindchange="genderChange">
+        <text class="">
+          {{index ? gender[index] : userInfo.gender}}
+        </text>
+      </picker>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content flex align-center">
+      <text class="flex-1">我的地址</text>
+      <picker class="text-content message mb-1" mode="region" bindchange="RegionChange" value="{{userInfo.area}}" custom-item="{{customItem}}">
+        <text>{{userInfo.area}}</text>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow">
+    <view class="content" bindtap="goBindPhone">
+      <text>手机号</text>
+      <input class="message text-content" style="text-align: right;" placeholder-style="color:#b6b6b6;" bindinput="bindphone" value="{{userInfo.phone}}" />
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="goBindDD">
+      <text>钉钉</text>
+      <text class="text-content message">已绑定</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="goBindGithub">
+      <text>GitHub</text>
+      <text class="text-content message">未绑定</text>
+    </view>
+  </view>
+</view>
+
+<button class="btn-primary mt-5" bindtap="pushUser">保存</button>

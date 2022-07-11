@@ -1,0 +1,59 @@
+<!--  -->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+    <!-- 顶部搜索栏 -->
+    <view class="box">
+        <view class="cu-bar bg-primary">
+            <view class="search-form round">
+                <text class="cuIcon-search"></text>
+                <input type="text" placeholder="请输入搜索内容" confirm-type="search" bindinput="searchIcon"></input>
+            </view>
+        </view>
+    </view>
+
+    <!-- 顶部广告板 -->
+    <view class="bg-img">
+        <swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+            <swiper-item wx:for="{{swiperList}}" wx:key="id">
+                <image src="{{item.imageUrl}}" mode="aspectFill" bindtap="tapToLink" data-linkurl="{{item.linkUrl}}" >
+                </image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 社区服务功能区 -->
+    <view class="container flex margin-left-l margin-right-l mt-2">
+        <view class="flex-sub text-center" bindtap="tapToFangChanJiaoYi">
+            <view class="cu-avatar xl round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_fcjy.png);">
+            </view>
+            <view class="text margin-top-xs">房产交易</view>
+        </view>
+        <view class="flex-sub text-center" bindtap="tapToTiaoZaoShiChang">
+            <view class="cu-avatar xl round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_tiaozaoshichang.png);">
+            </view>
+            <view class="text margin-top-xs">跳蚤市场</view>
+        </view>
+        <view class=" flex-sub text-center" bindtap="tapToXiaoQuShangJia">
+            <view class="cu-avatar xl round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_xiaoqushangjia.png);">
+            </view>
+            <view class="text margin-top-xs ">小区商家</view>
+        </view>
+    </view>
+
+    <!-- 热门推荐 -->
+    <view class="solid-bottom text-xl p-2">
+        <text class="text-black text-bold">热门推荐</text>
+    </view>
+    <!-- 展示栏 -->
+    <view bindtap="tapToHotDetail" class="shadow flex house" wx:for="{{commList}}" wx:key data-id="{{item.id}}" wx:if="{{item.isShow}}">
+        <view class="house--img">
+            <image src="{{item.thumbnail}}" mode="heightFix" class="house--img__size"></image>
+        </view>
+        <view class="align-center m-2 flex-1 house--text">
+            <view class="text-lg text-bold house--text__name">{{item.name}}</view>
+            <view class="text-sm text-grey mt-1 mb-1 house--text__content">{{item.content}}</view>
+            <view class="text-red text-xl text-right">{{item.price}}</view>
+        </view>
+    </view>
+
+    <!-- 底部留白 -->
+    <view class="bottom--whiteboard"></view>
+</scroll-view>

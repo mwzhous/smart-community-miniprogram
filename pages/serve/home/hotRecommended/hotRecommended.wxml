@@ -1,0 +1,53 @@
+<!-- 商品详情页面 -->
+<!-- 商品详情 -->
+
+<view class="cu-card article ">
+  <view class="cu-item shadow">
+    <!-- 头像 -->
+    <view class="margin-top-sm p-2  border-bottom">
+      <view class="cu-item flex">
+        <view class="cu-avatar round lg img" style="background-image: url({{obj.avatar}});"></view>
+        <view class="mt-2 ml-2">
+          <view>{{ obj.username}}</view>
+          <view class="text-gray text-sm">
+            {{obj.fleaMarketGoods.address}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 内容 -->
+    <view class="content">
+      <view class="desc padding-top-lg">
+        <view class="">
+          <view class="text-black text-bold margin-right-sm"> {{obj.fleaMarketGoods.name}}
+          </view>
+        </view>
+        <view class=" margin-top-xs">
+          <view class="text wrap">{{obj.fleaMarketGoods.content}}
+          </view>
+          <image src="{{obj.fleaMarketGoods.thumbnail}}" mode="aspectFill" class=" margin-top-lg"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部导航栏 -->
+<view class="flex bg-white padding-sm bottom-bar">
+  <view class=" flex flex-1 margin-sm text-xl" wx:if="{{obj.isMarked == false}}" bindtap="tapToShoucang" data-id="{{obj.fleaMarketGoods.id}}">  
+    <!-- <text class="cuIcon-favor"></text> -->
+    <view style="width: 50rpx;">
+      <image src="/images/icon/icon_x1.png" mode="widthFix"></image>
+    </view>
+    <view class="ml-2">收藏</view>
+  </view>
+  <view class=" flex flex-1 margin-sm text-xl" wx:if="{{obj.isMarked == true}}" bindtap="tapToQuxiaoshoucang" data-id="{{obj.fleaMarketGoods.id}}">
+    <!-- <text class="cuIcon-favor"></text> -->
+    <view style="width: 50rpx;">
+      <image wx:if="{{obj.isMarked == true}}" src="/images/icon/icon_x2.png" mode="widthFix"></image>
+    </view>
+    <view class="ml-2">已收藏</view>
+  </view>
+  <view>
+    <button class="btn">立即联系</button>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/user/smartHome/addEquipment/addEquipment.wxml-->
+<view class="cu-list menu">
+  <view class="cu-item">
+    <view>
+      <text class="text-black">设备分类</text>
+    </view>
+    <view class="cu-form-group">
+      <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+        <view class="picker">
+          {{index?picker[index]:'请选择'}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view>
+      <text class="text-black">设备名称</text>
+    </view>
+    <input type="text" placeholder="请输入设备名称" class="text-right" bindinput="facilityChange" />
+  </view>
+  <view class="cu-item">
+    <view>
+      <text class="text-black">设备序列号</text>
+    </view>
+    <input type="text" placeholder="请输入设备序列号" class="text-right" bindinput="serialChange" />
+  </view>
+  <view class="cu-item">
+    <view>
+      <text class="text-black">设备验证码</text>
+    </view>
+    <input type="text" placeholder="请输入设备验证码" class="text-right" bindinput="codeChange" />
+  </view>
+</view>
+<button class="btn-primary" bindtap="submit">添加</button>

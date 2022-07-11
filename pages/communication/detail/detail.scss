@@ -1,0 +1,63 @@
+/* pages/communication/detail/detail.wxss */
+.title {
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+}
+.nav {
+  // width: 100vw;
+  height: 40vh;
+  position: relative;
+
+
+  &__bottom {
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &__btn {
+      position: absolute;
+      background: #f17815;
+      bottom: 10rpx;
+      right: 0rpx;
+      left: 10rpx;
+      width: 140rpx !important;
+      font-size: 35rpx;
+      font-weight: 500;
+      color: #fff;
+      padding: 10rpx;
+      margin: 10rpx;
+      
+    }
+    &__input{
+      padding: 10rpx;
+    }
+  }
+}
+.bg-banner{
+  image {
+    width: 300rpx;
+    height: 300rpx;
+    object-fit: cover;
+    border-radius: 3px;
+    float: left;
+    margin: 5rpx;
+  }
+}
+.bg-banner1{
+  image {
+    width: 200rpx;
+    height: 200rpx;
+    object-fit: cover;
+    border-radius: 3px;
+    float: left;
+    margin: 5rpx;
+  }
+}
+
+
+.row-container {
+  margin-left: 100rpx;
+}

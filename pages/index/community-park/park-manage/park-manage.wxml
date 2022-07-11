@@ -1,0 +1,19 @@
+<!--pages/index/community-park/park-manage/park-manage.wxml-->
+<form>
+  <view>
+    <view class="park" wx:for="{{invited}}" wx:key="id">
+      <text class="h3">{{item.section}}</text>
+      <text class="margin-left">{{item.name}}</text>
+      <view class="text-gray">到期时间：{{item.endTime}}</view>
+      <view class="park__end" wx:if="{{item.days > 0}}">
+        <view class="park__end__num">{{item.carNumber}}</view>
+        <text class="text-orange text-right">{{item.days}}天到期</text>
+      </view>
+      <view class="park__end" wx:else>
+        <view class="park__end__day">{{item.carNumber}}</view>
+        <text class="text-gray text-right">已到期</text>
+      </view>
+    </view>
+    <button class="btn-primary" bindtap="tapToRental">租赁车位</button>
+  </view>
+</form>

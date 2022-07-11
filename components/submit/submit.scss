@@ -1,0 +1,26 @@
+/* components/submit/submit.wxss */
+@import "style/variables.scss";
+.container{
+  background: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 100%;
+}
+.btn-container {
+  color: #f3f4f6;
+  width: 700rpx !important;
+}
+.picture{
+  background-color: $secondFontColor;
+  width: 100px;
+  display: flex;
+  position: relative;
+	justify-content: space-between;
+}
+
+.add-container {
+  border: 5rpx solid #e7e7e7;
+  background-color: #e7e6e8;
+}

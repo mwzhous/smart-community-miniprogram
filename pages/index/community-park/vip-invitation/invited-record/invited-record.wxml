@@ -1,0 +1,16 @@
+<!--pages/index/community-park/vip-invitation/invited-record/invited-record.wxml-->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <view class="record" wx:for="{{invited}}" wx:key="id">
+    <view>
+      <text class="record__name">{{item.invitationRecord.contact}}</text>
+      <text class="text-second">（{{item.invitationRecord.phone}}）</text>
+      <text class="text-second record__home">{{item.communityName}}</text>
+    </view>
+    <view>
+      <text class="text-second">{{item.invitationRecord.startTime}}~</text>
+      <text class="text-second">{{item.invitationRecord.endTime}}</text>
+      <text class="text-second record__car">{{item.invitationRecord.carNumber}}</text>
+    </view>
+    <view class="text-second">备注：{{item.invitationRecord.remark}}</view>
+  </view>
+</scroll-view>

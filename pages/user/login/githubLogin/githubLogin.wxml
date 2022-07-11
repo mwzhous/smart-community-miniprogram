@@ -1,0 +1,2 @@
+<!--pages/user/login/githubLogin/githubLogin.wxml-->
+<web-view src="{{html}}"></web-view>

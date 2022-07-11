@@ -1,0 +1,23 @@
+<!--pages/index/home/lunbo/lunbo.wxml-->
+<!--pages/index/zixunabout/zixunabout.wxml-->
+<view class="text-content padding" wx:if="{{detail.linkUrl}}">
+    <web-view src="{{detail.linkUrl}}"></web-view>
+  </view>
+<view class="" wx:else>
+  <view class="cu-list">
+    <view class="cu-item">
+      <view class="text-xxl" style="margin-right: 20rpx;margin-top: 40rpx;margin-left: 30rpx;">
+        {{detail.title}}
+      </view>
+      <view class="padding text-content">
+        {{detail.createTime}}
+      </view>
+      <view>
+        <image src="{{detail.imageUrl}}" style="width: 680rpx; height: 500rpx; margin-left: 40rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <view class="text-content padding">
+    <rich-text nodes="{{detail.content}}"></rich-text>
+  </view>
+</view>

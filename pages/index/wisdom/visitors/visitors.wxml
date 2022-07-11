@@ -1,0 +1,41 @@
+<!--pages/index/wisdom/visitors/visitors.wxml-->
+<view class="shadow">
+  <view class="pt-2 pl-3">请选择门锁（可多选）</view>
+  <view class="padding flex angle">
+    <view>
+      <view class="cu-btn bg-white angle__card {{index==currentId?'text-border':''}}" wx:for="{{TabCur}}" wx:key="id" bindtap="buttonSelect" data-id="{{index}}" style="margin: 18rpx;">
+        <view class="flex-column">
+          <view class="text-gray h3">{{item.id}}</view>
+          <view class="text-black pb-3">{{item.name}}</view>
+        </view>
+        <image wx:if="{{index==currentId}}" src="/images/icon/icon_gouxuan.png" class="angle__image"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 时间选择器 -->
+<view class="box shadow bg-white">
+  <view>
+    <DatetimePicker mode="dateminute" value="{{startTime}}" bindchange="startTimeChange">
+      <view class="p-4"><text class="text-black">开始时间 : </text> {{startTime}}</view>
+    </DatetimePicker>
+  </view>
+  <view>
+    <DatetimePicker mode="dateminute" value="{{endTime}}" bindchange="endTimeChange">
+      <view class="p-4 "><text class="text-black">结束时间 : </text> {{endTime}}</view>
+    </DatetimePicker>
+  </view>
+</view>
+<view class="box shadow">
+  <view class="flex bg-white p-4">
+    <text class="text-black">访客姓名</text>
+    <input bindinput="bindNameInput" placeholder="请输入访客姓名" />
+  </view>
+  <view class="flex bg-white p-4">
+    <text class="text-black ">手机号码</text>
+    <input bindinput="bindPhoneInput" placeholder="请输入手机号" />
+  </view>
+  <view>
+    <button class="btn-primary" bindtap="memberAdd">发送邀请</button>
+  </view>
+</view>

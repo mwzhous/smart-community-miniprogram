@@ -1,0 +1,25 @@
+/* pages/user/switch/switch.wxss */
+.list {
+  width: 100%;
+  height: 100%;
+  padding-top: 28rpx;
+}
+
+.round {
+  float: right;
+}
+
+.btn {
+  position: fixed; // 使按钮固定于可视窗口的底部
+  bottom: 10rpx;
+  left: 0;
+  right: 0;
+  border-radius: 20rpx;
+
+  &__button {
+    background: #f7860c;
+    color: #fdf1ec;
+    height: 70rpx;
+    width: 90% !important;
+  }
+}

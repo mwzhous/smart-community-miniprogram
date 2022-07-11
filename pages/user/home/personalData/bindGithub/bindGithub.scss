@@ -1,0 +1,24 @@
+/* pages/user/home/personalData/bindGithub/bindGithub.wxss */
+.page {
+  height: 100vh;
+  // background: rgb(196, 135, 135);
+  position: relative;
+}
+
+.container {
+  // background: red;
+  padding: 60rpx;
+  text-align: center;
+
+  &__photo {
+    width: 150rpx;
+    height: 150rpx;
+  }
+}
+
+.btn-primary {
+  position: absolute;
+  bottom: 10rpx;
+  left: 0;
+  right: 0;
+}

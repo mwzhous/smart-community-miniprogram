@@ -1,0 +1,39 @@
+<!--components/dianzifapiao/dianzifapiao.wxml-->
+<view class="padding" style="color: #ccccce;">发票详情</view>
+
+<view class="bg-white">
+  <view class="py-2 flex">
+		<text style="color: #3b3b3b; margin-left: 30rpx;">抬头类型</text>
+    <radio class="orange radio" style="transform: scale(0.6); margin-left: 30rpx;">
+    </radio>
+    <text>企业单位</text>
+    <radio class="orange radio" style="transform: scale(0.6);margin-left: 100rpx;">
+    </radio>
+    <text>个人/非企业单位</text>
+	</view>
+  <view class=" price ">
+		<view  style="color: black; padding-left: 30rpx;">发票抬头</view>
+		<input style="margin-right: 260rpx;" bindinput="bindprice" placeholder-style="color: #cfd0cf;"placeholder="填写发票抬头"></input>
+	</view>
+  <view class=" price ">
+		<view  style="color: black; padding-left: 30rpx;">税号</view>
+		<input style="padding-right: 270rpx" bindinput="bindprice" placeholder-style="color: #cfd0cf;"placeholder="填写纳税人识别号"></input>
+	</view>
+  <view class="price ">
+		<view  style="color: black; padding-left: 30rpx;">发票金额</view>
+		<input style="padding-right: 270rpx" bindinput="bindprice" placeholder-style="color: #cfd0cf;"placeholder="0.10元"></input>
+	</view>
+  <view class=" price ">
+		<view  style="color: black; padding-left: 30rpx;">发票内容</view>
+		<input style="padding-right: 270rpx" placeholder-style="color: #cfd0cf;"placeholder="填写发票内容"></input>
+	</view>
+  <view class="flex py-2">
+		<text  style="color: black; padding-left: 30rpx;">更多信息</text>
+		<input style="padding-right: 270rpx;margin-left: 30rpx;" placeholder-style="color: #cfd0cf;width:600rpx"placeholder="填写备注、地址等（非必填）"></input>
+	</view>
+</view>
+<view class="padding" style="color: #ccccce;">接收方式</view>
+<view class="bg-white price" style="margin-bottom: 30rpx;">
+		<view  style="color: black; padding-left: 30rpx;">电子邮箱</view>
+		<input style="width: 600rpx;" placeholder-style="color: #cfd0cf;margin-left:20rpx;"placeholder="用于向您发送电子发票和行程单"></input>
+	</view>

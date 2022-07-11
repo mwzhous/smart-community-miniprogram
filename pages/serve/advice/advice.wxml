@@ -1,0 +1,3 @@
+<!--pages/serve/advice/advice.wxml-->
+<sumbit></sumbit>
+<button class="btn-primary" bindtap="onAdvice">查看投诉记录</button>

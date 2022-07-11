@@ -1,0 +1,29 @@
+/* pages/index/community-park/vip-invitation/invited-record/invited-record.wxss */
+.record {
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  position: relative;
+  line-height: 2.5;
+  &__name {
+    color: black;
+    font-size: 32rpx;
+    font-weight: 500;
+  }
+
+  &__home {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+  }
+
+  &__car {
+    position: absolute;
+    bottom: 10%;
+    right: 20rpx;
+    color: black;
+    font-size: 32rpx;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,108 @@
+/* pages/index/community-park/park-interface/park-interface.wxss */
+
+.park {
+  width: 96%;
+  margin: auto;
+  text-align: center;
+  background: var(--white);
+  margin-top: 20rpx;
+  color: #000;
+  font-size: 50rpx;
+}
+
+.inter {
+  width: 96%;
+  height: 120rpx;
+  margin: auto;
+  background-color: var(--white);
+  padding: 1rpx 30rpx;
+  display: flex;
+  align-items: center;
+  min-height: 100rpx;
+  color: rgb(131, 131, 131);
+
+  &__title {
+    width: 30%;
+  }
+}
+
+.inter picker {
+	flex: 1;
+	padding-right: 40rpx;
+	position: relative;
+}
+
+.inter picker .picker {
+	line-height: 100rpx;
+	font-size: 28rpx;
+}
+
+.inter picker::after {
+	font-family: "cuIcon";
+	content: "\e6a3";
+	position: absolute;
+	line-height: 100rpx;
+	width: 60rpx;
+	top: 0;
+	bottom: 0;
+	right: -20rpx;
+}
+
+.btn {
+  display: flex;
+	flex-direction: row;
+	padding: 30rpx;
+  justify-content: space-between;
+  &__rental {
+    border: 2rpx solid var(--blue);
+    color: var(--blue);
+    border-radius: 6rpx;
+  }
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+  outline: 0;
+  z-index: 1000;
+  -ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+}
+
+.modal::before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-ms-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+.scroll {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5%;
+  padding: 20rpx;
+	width: 90%;
+  max-width: 100%;
+  height: 80%;
+	background-color: #f8f8f8;
+	border-radius: 10rpx;
+	overflow: hidden;
+}

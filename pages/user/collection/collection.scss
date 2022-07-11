@@ -1,0 +1,37 @@
+/* pages/user/collection/collection.wxss */
+.swiper {
+  height: 100vh;
+}
+
+.card {
+  background: #fff;
+  border-radius: 50rpx;
+}
+
+.banner {
+  width: 80%;
+  height: 200rpx;
+}
+.house {
+  position: relative;
+  height: 200rpx;
+  background-color: white;
+  margin: 20rpx;
+  border-radius: 10rpx;
+
+  &--img {
+    width: 30%;
+
+    &__size {
+      height: 200rpx;
+      width: 15%;
+      border: 1px solid white;
+      border-radius: 30rpx 0 0 30rpx;
+    }
+  }
+  &__content {
+    word-wrap: break-word;
+    word-break: normal;
+  }
+}
+

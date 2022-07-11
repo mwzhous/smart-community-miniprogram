@@ -1,0 +1,10 @@
+<!--components/shelves/shelves.wxml-->
+<!-- 上架模块 -->
+<view class="bottom">
+  <view class="bottom--card" bindtap="goPush">
+    <image src="/images/icon/icon_shangjia.png" class="bottom--card__img"  mode="heightFix"></image>
+    <view>
+    <text class="text-orange">立即上架</text>
+    </view>
+  </view>
+</view>

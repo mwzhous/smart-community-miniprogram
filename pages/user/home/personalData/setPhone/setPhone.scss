@@ -1,0 +1,56 @@
+/* pages/user/home/personalData/setPhone/setPhone.wxss */
+.login {
+  .title-item {
+    height: 80rpx;
+    line-height: 80rpx;
+  }
+  .cur {
+    border-bottom: 1.5px solid orange;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110rpx 0px;
+
+    image {
+      width: 135rpx;
+      height: 135rpx;
+    }
+  }
+  .container {
+    text-align: center;
+  }
+
+  .input_content {
+    margin: 0rpx 30rpx;
+    padding: 20rpx;
+    background-color: #fff;
+    border-radius: 15rpx;
+
+    .top {
+      display: flex;
+      align-items: center;
+      border-bottom: 1rpx solid #f6f6f6;
+      margin-left: 11px;
+
+      .icon {
+        width: 40rpx;
+        height: 40rpx;
+      }
+      .youjian {
+        width: 40rpx;
+        height: 30rpx;
+      }
+      input {
+        margin: 15px 10px;
+      }
+
+      &__send {
+        float: right;
+        margin-left: 80rpx;
+        margin-top: -20rpx;
+      }
+    }
+  }
+}

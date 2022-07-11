@@ -1,0 +1,48 @@
+<!--pages/user/signIn/signIn.wxml-->
+<!-- 签到 -->
+<scroll-view scroll-y>
+  <view class="sign">
+    <image src="/images/img/bg_qiandao.png" mode="scaleToFill" class="sign__img"></image>
+    <view class="sign__title p-2" style="{{'top:'+statusBarHeight+';height:' + navigationBarHeight}}">
+      <text bindtap="back" class="cuIcon-back"></text>
+      <view class="sign__title__tab font-sm">签 到</view>
+    </view>
+    <view class="sign__balance text-white text-center">
+      <view class="h1">{{integration}}</view>
+      <view>积分</view>
+    </view>
+    <view class="text-center" wx:if="{{isSignIn}}">
+      <button class="sign__btn" bindtap="signIn">立即签到</button>
+    </view>
+    <view class="text-center" wx:else>
+      <button class="sign__btn1">今日已签</button>
+    </view>
+    <view class="text-center m-4">
+      已签到<text>{{day}}</text>天，继续签到可获得<text>{{nextIntegration}}</text>积分
+    </view>
+    <scroll-view scroll-x class="scroll-x ">
+      <view class="view__item" wx:for="{{dayList}}" wx:key="id">
+        <view class="view__item__time1 ml-1 text-white bg-primary pl-2 pt-1" bindtap="clickItem" data-item="{{item}}" wx:if="{{item.isSignIn}}">+{{item.integration}}
+          <view class="cuIcon-check font-lg"></view>
+        </view>
+        <view class="view__item__time ml-1" bindtap="clickItem" data-item="{{item}}" wx:else>+{{item.integration}}</view>
+        <view class='weui-cell-list mt-2'>
+          <view class='line' style="background:{{item.star}}"></view>
+          <view class="dot {{item.isSignIn?'dotActive':''}}"></view>
+          <view class='line' style="background:{{item.end}}"></view>
+        </view>
+        <view class="view__item__hint text-primary" bindtap="clickItem" data-item="{{item}}" wx:if="{{item.isSignIn}}">{{item.day}}</view>
+        <view class="view__item__hint text-gray" bindtap="clickItem" data-item="{{item}}" wx:else>{{item.day}}</view>
+      </view>
+    </scroll-view>
+
+    <view class="sign__state">
+      <view class="text-gray text-center m-4">签到规则</view>
+      <view class="bg-white p-3 m-1 shadow text-black">
+        <view>1、连续签到七天可获得100积分。</view>
+        <view>2、签到所获得积分可用于福来来商城购物抵现，每次抵现份额不超过商品总额的1%。</view>
+        <view>2、积分每年的12月31日清零，次年积分继续累积只能当年使用。</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

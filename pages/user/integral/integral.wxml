@@ -1,0 +1,28 @@
+<!--pages/user/integral/integral.wxml-->
+<!--我的积分-->
+<scroll-view scroll-y>
+  <view class="wallet-bg">
+    <image src="/images/img/bg_jifen.png" mode="widthFix" class="wallet-bg__img"></image>
+    <view class="wallet-bg__title p-2" style="{{'top:'+statusBarHeight+';height:' + navigationBarHeight}}">
+      <text bindtap="back" class="cuIcon-back"></text>
+      <view class="tab font-sm">我的积分</view>
+    </view>
+    <view class="wallet-bg__balance text-white text-center">
+      <view class="h1 pt-1 ">{{totalIntegration}}</view>
+      <view>我的积分</view>
+    </view>
+    <view class="cu-list menu card-menu radius shadow bg-white wallet-bg__exponse" wx:for="{{integral}}" wx:key="id">
+      <view class="cu-item card">
+        <view class="content ">
+          <view class="text-black">{{item.purpose}}</view>
+          <view class="text-gray text-sm flex">
+            <text class="text-gray margin-right-xs">{{item.createTime}}</text>
+          </view>
+        </view>
+        <view class="action font-lg text-green">
+          <text>{{item.count}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

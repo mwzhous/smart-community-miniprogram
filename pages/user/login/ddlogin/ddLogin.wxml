@@ -1,0 +1,4 @@
+<!--pages/user/login/ddlogin/ddLogin.wxml-->
+<!-- <rich-text nodes="{{html}}"></rich-text> -->
+<!-- <mp-html content="{{html}}" /> -->
+<web-view binderror="bindmsg" bindload="bindld" src="{{html}}"></web-view>

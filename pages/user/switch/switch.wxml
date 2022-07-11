@@ -1,0 +1,15 @@
+<!--切换小区-->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <view class="cu-list menu shadow mt-2">
+    <view class="cu-item " style="height: 120rpx;">
+      <text>{{current}}</text>
+      <radio class="round orange" checked="{{true}}"></radio>
+    </view>
+  </view>
+  <view class="cu-list menu shadow">
+    <view class="cu-item arrow" wx:for="{{communityList}}" wx:key="id" bindtap="changeCommunity" style="height: 130rpx;" id="{{item.id}}" data-name="{{item.name}}">
+      <text>{{item.name}}</text>
+      <text class="text-gray">点击切换</text>
+    </view>
+  </view>
+</scroll-view>

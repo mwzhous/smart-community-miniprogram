@@ -1,0 +1,28 @@
+<!--pages/user/myWallet/myWallet.wxml-->
+<!-- 我的钱包 -->
+<scroll-view scroll-y>
+  <view class="wallet-bg">
+    <image src="/images/img/bg_qiandao.png" mode="widthFix" class="wallet-bg__img"></image>
+    <view class="wallet-bg__title p-2" style="{{'top:'+statusBarHeight+';height:' + navigationBarHeight}}">
+      <text bindtap="back" class="cuIcon-back"></text>
+      <view class="tab font-sm">我的钱包</view>
+    </view>
+    <view class="wallet-bg__balance text-white text-center">
+      <view class="h1 pb-1">300</view>
+      <view>账户余额（元）</view>
+    </view>
+    <view class="cu-list menu card-menu radius shadow bg-white wallet-bg__exponse" wx:for="{{expense}}" wx:key="id">
+      <view class="cu-item card">
+        <view class="content ">
+          <view class="text-black">{{item.purpose}}</view>
+          <view class="text-gray text-sm flex">
+            <text class="text-gray  margin-right-xs">{{item.createTime}}</text>
+          </view>
+        </view>
+        <view class="action font-lg">
+          <text>{{item.money}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

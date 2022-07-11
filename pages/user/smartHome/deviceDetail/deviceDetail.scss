@@ -1,0 +1,21 @@
+/* pages/user/smartHome/deviceDetail/deviceDetail.wxss */
+.bg {
+  background: url(https://ossstored.oss-cn-shanghai.aliyuncs.com/md-pic/01cf73574af6b66ac72525aeebf0f0.jpg%401280w_1l_2o_100sh.jpg)
+    no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  width: 100vw;
+
+  &__btn {
+    position: absolute;
+    bottom: 20rpx;
+    left: 0;
+    right: 0;
+
+    .button {
+      width: 120rpx;
+      height: 120rpx;
+      border: 1px solid #333;
+    }
+  }
+}

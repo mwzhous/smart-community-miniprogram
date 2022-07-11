@@ -1,0 +1,87 @@
+<!--pages/serve/merchants/myshop/myshop.wxml-->
+
+  <!-- 已通过 -->
+  <view class="house" style="position: relative;">
+  <view class="flex ">
+    <view class="house--img">
+      <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/shop.png" mode="heightFix" class="house--img__size"></image>
+    </view>
+    <view class="flex flex-wrap align-center m-2 flex-1 house--text">
+      <view class="flex justify-between house--text__cardsize">
+        <view class="flex justify-between" style="width: 100%;">
+          <view class="text-bold text-xl">双龙超市</view>
+        </view>
+      </view>
+      <view class="flex justify-between text-grey house--text__cardsize">
+        <view class="text-grey mt-1 text-sm">起送
+          <text class="text-price"></text>20
+          配送
+          <text class="text-price"></text>4
+        </view>
+      </view>
+      <view class="text-grey mt-1 text-sm">
+        公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+      </view>
+    </view>
+    <view style="position: absolute;right: 10rpx; top: 10rpx;">
+      <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/bg_yitongguo.png" style="width: 120rpx;height: 120rpx;"></image>
+    </view>
+  </view>
+</view>
+
+<view class="house" style="position: relative;">
+  <view class="flex ">
+    <view class="house--img">
+      <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/shop.png" mode="heightFix" class="house--img__size"></image>
+    </view>
+    <view class="flex flex-wrap align-center m-2 flex-1 house--text">
+      <view class="flex justify-between house--text__cardsize">
+        <view class="flex justify-between" style="width: 100%;">
+          <view class="text-bold text-xl">双龙超市</view>
+        </view>
+      </view>
+      <view class="flex justify-between text-grey house--text__cardsize">
+        <view class="text-grey mt-1 text-sm">起送
+          <text class="text-price"></text>20
+          配送
+          <text class="text-price"></text>4
+        </view>
+      </view>
+      <view class="text-grey mt-1 text-sm">
+        公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+      </view>
+    </view>
+    <view style="position: absolute;right: 10rpx; top: 10rpx;">
+      <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/bg_weitongguo.png" style="width: 120rpx;height: 120rpx;"></image>
+    </view>
+  </view>
+</view>
+
+<view class="house" style="position: relative;">
+  <view class="flex ">
+    <view class="house--img">
+      <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/shop.png" mode="heightFix" class="house--img__size"></image>
+    </view>
+    <view class="flex flex-wrap align-center m-2 flex-1 house--text">
+      <view class="flex justify-between house--text__cardsize">
+        <view class="flex justify-between" style="width: 100%;">
+          <view class="text-bold text-xl">双龙超市</view>
+        </view>
+      </view>
+      <view class="flex justify-between text-grey house--text__cardsize">
+        <view class="text-grey mt-1 text-sm">起送
+          <text class="text-price"></text>20
+          配送
+          <text class="text-price"></text>4
+        </view>
+      </view>
+      <view class="text-grey mt-1 text-sm">
+        公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+      </view>
+    </view>
+    <view style="position: absolute;right: 10rpx; top: 10rpx;">
+      <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/bg_daishenhe.png" style="width: 120rpx;height: 120rpx;"></image>
+    </view>
+  </view>
+</view>
+

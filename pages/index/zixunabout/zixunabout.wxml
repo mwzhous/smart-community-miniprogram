@@ -1,0 +1,70 @@
+<!--pages/index/zixunabout/zixunabout.wxml-->
+<view class="">
+  <view class="cu-list">
+    <view class="cu-item">
+      <view class="text-xxl" style="margin-right: 20rpx;margin-top: 40rpx;margin-left: 30rpx;">
+        {{detail.title}}
+      </view>
+      <view class="padding text-content">
+        {{detail.createTime}}
+      </view>
+      <view>
+        <image src="{{detail.imageUrl}}" style="width: 680rpx; height: 500rpx; margin-left: 40rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <view class="text-content padding">
+    <rich-text nodes="{{detail.content}}"></rich-text>
+  </view>
+  <view class="cu-list menu-avatar bg-white mx-2 pb-3">
+    <view class="padding">全部回复</view>
+    <block wx:for="{{comment}}" wx:key="">
+      <view class="flex p-3">
+        <view class="round lg">
+          <image src="{{item.avatar}}" class="round size-80"></image>
+        </view>
+        <view class="flex-1 ml-2">
+          <view>{{item.userName}}</view>
+          <view class="text-gray text-sm">
+            {{item.createTime}}
+          </view>
+          <view class="text-gray mt-1" bindtap="replyComment">
+            {{item.content}}
+          </view>
+        </view>
+        <view class="mr-3">
+          <image src="/images/icon/icon_dianzan.png" style="width: 30rpx;" mode="widthFix"></image>
+          <text class="p-1" style="color: #c7c7c8;" bindtap="dianzan" data-id="{{item.id}}">{{item.thumpCount}}</text>
+        </view>
+      </view>
+      <view class="flex p-3 row-container" wx:for="{{item.repairList}}" wx:for-item="item1" wx:key="" wx:if="{{item.id == item1.parentCommentId}}">
+        <view class="round lg">
+          <image src="{{item1.avatar}}" class="round size-80"></image>
+        </view>
+        <view class="flex-1 ml-2">
+          <view>{{item1.userName}}</view>
+          <view class="text-gray text-sm">
+            {{item1.createTime}}
+          </view>
+          <view class="text-gray">
+            {{item1.content}}
+          </view>
+        </view>
+        <view class="mr-3">
+          <image src="/images/icon/icon_dianzan.png" style="width: 30rpx;" mode="widthFix"></image>
+          <text class="p-1" style="color: #c7c7c8;" bindtap="dianzan1" data-id="{{item1.id}}">{{item1.thumpCount}}</text>
+        </view>
+      </view>
+    </block>
+
+
+  </view>
+  <view class="nav">
+    <view class="cu-bar bg-white search mt-3 nav__bottom">
+      <view class="search-form radius">
+        <input type="text" placeholder="请输入评论..." bindinput="bindcontent" value="{{content}}"></input>
+      </view>
+      <button class="nav__bottom__btn" style="width: 150rpx; margin-right: 20rpx;" bindtap="submit">发布</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!-- 意见反馈 -->
+<view>
+    <textarea class="feelback p-2 bg-white" placeholder="请您填写遇到的问题与建议，我们会第一时间处理。" bindblur="bindTextAreaBlur" value="{{content}}" bindinput="bindContentInput">
+    </textarea>
+    <view class="weui-cell_input bg-white">
+        <input class="weui-input m-2" auto-focus placeholder="手机号码，选填" value="{{phone}}" bindinput="bindTelInput" />
+    </view>
+    <button class="btn-primary" bindtap="feedBack">提 交</button>
+</view>

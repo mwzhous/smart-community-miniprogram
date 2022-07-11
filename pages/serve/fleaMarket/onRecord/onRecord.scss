@@ -1,0 +1,42 @@
+/* pages/serve/fleaMarket/onRecord/onRecord.wxss */
+.house {
+  height: 200rpx;
+  background-color: white;
+  margin: 20rpx;
+  border: 1px solid white;
+  border-radius: 30rpx;
+
+  &--img {
+      width: 30%;
+
+      &__size {
+          height: 200rpx;
+          width: 15%;
+          border: 1px solid white;
+          border-radius: 30rpx 0 0 30rpx;
+      }
+  }
+  &--text{
+    &__name{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /*设置对其模式 */
+      -webkit-line-clamp: 1;
+      /*设置多行的行数*/
+    }
+    &__content{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /*设置对其模式 */
+      -webkit-line-clamp: 2;
+      /*设置多行的行数*/
+    }
+  }
+}
+.state{
+  border-color: orange;
+}

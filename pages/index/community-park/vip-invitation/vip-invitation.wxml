@@ -1,0 +1,45 @@
+<!--pages/index/community-park/vip-invitation/vip-invitation.wxml-->
+<view class="mt-3"></view>
+<form>
+  <view class="cu-form-group">
+    <view class="title text-body">联系人</view>
+    <input bindinput="changeName" class="input-pl" placeholder="请输入姓名"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title text-body">联系电话</view>
+    <input bindinput="bindPhone" placeholder="请输入手机号"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title text-body">车牌</view>
+    <input bindinput="bindcard" placeholder="请输入车牌号"></input>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title text-body">选择小区</view>
+    <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        {{index?picker[index]:'请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title text-body">开始时间</view>
+    <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="TimeChange">
+      <view class="picker">
+        {{time}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title text-body">结束时间</view>
+    <picker mode="time" value="{{time1}}" start="00:00" end="23:59" bindchange="TimeChange1">
+      <view class="picker">
+        {{time1}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group margin-top">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="备注（选填）"></textarea>
+  </view>
+  <button class="btn-primary" bindtap="putInvate">提交</button>
+  <button class="btn-primary" bindtap="tapToRecord">查看邀请记录</button>
+</form>

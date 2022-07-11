@@ -1,0 +1,11 @@
+<!--pages/user/home/personalData/bindGithub/bindGithub.wxml-->
+<view class="page">
+  <view class="container">
+    <image src="https://cdn.jsdelivr.net/gh/Radicalfive/MK-image@master/image.56r1fvbybag0.webp" class="container__photo"></image>
+    <view class="p-2">未绑定github</view>
+  </view>
+  <view class="p-4 text-gray">
+    <text>您可以点击下方按钮解除当前github的绑定，或绑定新的github号</text>
+  </view>
+  <button class="btn-primary">新增绑定</button>
+</view>

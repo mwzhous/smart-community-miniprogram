@@ -1,0 +1,54 @@
+<!--pages/serve/merchants/shops/shops.wxml-->
+<view class="border-top">
+  <ul>
+    <li><a class="active" href="#All">全部</a></li>
+    <li><a href="#Snacks">零食</a></li>
+    <li><a href="#Fruites">水果</a></li>
+    <li><a href="#Vegetables">蔬菜</a></li>
+  </ul>
+  <!-- 全部商品 -->
+  <view class="allshops">
+    <view class="mt-2 font-sm font-lack">全部</view>
+    <!-- 商品展示区域 -->
+
+    <view class="cu-list menu-avatar mt-3 mb-3">
+      <view class="flex">
+        <view class="cu-avatar xl " style="background-image:url(https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/food.png);"></view>
+        <view class="content ml-3">
+          <view class="flex">
+            <view class="text-lg flex-1 text-bold">桶装泡面</view>
+            <view class="text-grey text-xs mt-1 kz">库存2份</view>
+          </view>
+          <view class="text-gray text-xs mt-1">
+            月售20
+          </view>
+          <view class="flex  mt-1">
+            <view class="flex-1 texl-xs">
+              <text class="text-red  text-price">20.00</text>/包
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar mt-3 mb-3">
+      <view class="flex">
+        <view class="cu-avatar xl " style="background-image:url(https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/food.png);"></view>
+        <view class="content ml-3">
+          <view class="flex">
+            <view class="text-lg flex-1 text-bold">桶装泡面</view>
+            <view class="text-grey text-xs mt-1 kz">库存2份</view>
+          </view>
+          <view class="text-gray text-xs mt-1">
+            月售20
+          </view>
+          <view class="flex  mt-1">
+            <view class="flex-1 texl-xs">
+              <text class="text-red  text-price">20.00</text>/包
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>

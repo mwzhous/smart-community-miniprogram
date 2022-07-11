@@ -1,0 +1,52 @@
+<!--pages/index/community-park/rental-car/rental-car.wxml-->
+<form action="">
+  <view class="cu-form-group px-3 py-1 margin-top">
+    <view class="title">选择停车场</view>
+    <picker bindchange="IdChange" data-id="{{item.id}}" value="{{id}}" range="{{picker1}}">
+      <view class="picker">
+        {{id?picker1[id]:'请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group px-3 py-1">
+    <view class="title">区位号</view>
+    <picker bindchange="ParkChange" value="{{park}}" range="{{picker2}}">
+      <view class="picker">
+        {{park?picker2[park]:'请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group px-3 py-1">
+    <view class="title">车位号</view>
+    <picker bindchange="CarChange" value="{{car}}" range="{{picker3}}">
+      <view class="picker">
+        {{car?picker3[car]:'请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group px-3 py-1">
+    <view class="title">卡类</view>
+    <picker bindchange="CardChange" value="{{card}}" range="{{picker4}}">
+      <view class="picker">
+        {{card?picker4[card]:'请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group px-3 py-2">
+    <view class="title">车牌号</view>
+    <input bindinput="codeValue" placeholder="请输入车牌号"></input>
+  </view>
+  <button class="btn-primary mt-10" bindtap="goput">去申请</button>
+  <!-- 底部结算导航栏 -->
+  <view class="flex bg-white padding-sm bottom-bar">
+    <view class="flex-1  flex margin-sm text-xl">
+      <view class="h3" style="font-weight: 500;">总金额：</view>
+      <view class="ml-2">
+        <text class="money">¥ {{price}}</text>
+      </view>
+    </view>
+    <view>
+      <button class="btn" bindtap="">去支付</button>
+    </view>
+  </view>
+</form>

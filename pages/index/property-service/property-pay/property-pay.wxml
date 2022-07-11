@@ -1,0 +1,58 @@
+<!--pages/index/property-service/property-pay/property-pay.wxml-->
+<view class="bgt">
+  <image src="/images/img/bg_wyjf.png" class="bgt--img"></image>
+  <view class="bgt--text" wx:for="{{record}}" wx:key="id">
+    <view class="bgt--text__title p-2" style="{{'top:'+statusBarHeight+';height:' + navigationBarHeight}}">
+      <text bindtap="back" class="cuIcon-back"></text>
+      <text class="ml-center font-md">物业缴费</text>
+    </view>
+    <view class="bgt--text__yue">
+      <text class="h1">{{rental}}</text>
+      <view class="font">待缴余额(元)</view>
+    </view>
+    <view class="bgt--text__jiaofei">
+      <view bindtap="showModal" data-target="Modal">一键缴费</view>
+    </view>
+    <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+      <view class="cu-dialog">
+        <view class="cu-bar bg-white justify-end">
+          <view class="content">请选择支付方式</view>
+          <view class="action" bindtap="hideModal">
+            <text class="cuIcon-close text-red"></text>
+          </view>
+        </view>
+        <view class="padding-xl">
+          <text class="text-xxl">总计金额</text>
+          <view class="h1">¥ {{rental}}</view>
+          <radio-group class="block">
+            <view class="cu-form-group  margin-top">
+              <view>工商银行支付</view>
+              <radio checked></radio>
+            </view>
+            <view class="cu-form-group">
+              <view class="title">云闪付(银行卡)支付</view>
+              <radio checked></radio>
+            </view>
+          </radio-group>
+        </view>
+        <view class="pay">
+          <button class="pay__wx cuIcon-moneybag" bindtap="hideModal1">微信支付</button>
+          <button class="pay__btn" bindtap="hideModal1">确定缴费</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="p-2">
+  <view class="wyf" wx:for="{{record}}" wx:key="id">
+    <view class="xie">
+      <text class="xie__dingdan">订单编号：{{item.familyId}}</text>
+    </view>
+    <view class="wyf__month">
+      <text class="font-md">{{item.id}}月物业费</text>
+      <view class="wyf__month__money">¥ {{item.billAccount}}</view>
+    </view>
+    <view class="wyf__zhifu">
+      {{item.status}}</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "社区活动",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "progress-bar" : "/components/progress/progress"
+  }
+}

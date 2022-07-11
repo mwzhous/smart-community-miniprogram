@@ -1,0 +1,24 @@
+<!--pages/user/smartHome/deviceDetail/deviceDetail.wxml-->
+<view class="bg">
+  <view class="flex p-2 ">
+    <view>设备是否开启：</view>
+    <view>{{isEnable === 1 ? '是':'否'}}</view>
+  </view>
+  <view class="flex p-2">
+    <view>设备型号：</view>
+    <view>{{deviceName}}</view>
+  </view>
+  <view class="bg__btn text-center">
+    <view class="flex solid-bottom padding justify-around font-llg">
+      <view class="bg-primary radius rounded-50 button p-3" wx:if="{{isEnable === 1}}" bindtap="open">
+        <text class="cuIcon-lightfill"></text>
+      </view>
+      <view class="bg-white radius rounded-50 button p-3" wx:else bindtap="open">
+        <text class="cuIcon-light"></text>
+      </view>
+      <view class="bg-white radius rounded-50 button p-3">
+        <text class="cuIcon-time"></text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/serve/advicecontent/details/details.wxml-->
+<view class="bg-white rounded pb-3" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;">
+  <view class="padding text-content" style="color: #c7c7c7;">
+    {{AdviceList.createTime}}
+  </view>
+  <view class="padding" style="margin-top: -40rpx;" bindtap="getDetail" data-id="{{AdviceList.id}}">
+    {{AdviceList.complainContent}}
+  </view>
+  <view class="flex">
+    <image wx:for="{{AdviceList.complainImg}}" src="{{item}}" style="width: 200rpx;height: 200rpx; margin-left: 30rpx;"></image>
+  </view>
+  <view class="detail__revert">
+      <view class="flex detail__revert__back mb-2">
+        <text>物业回复:</text>
+        <text>{{AdviceList.createTime}}</text>
+      </view>
+      <text class="text-xl">{{AdviceList.repairResult}}</text>
+    </view>
+</view>

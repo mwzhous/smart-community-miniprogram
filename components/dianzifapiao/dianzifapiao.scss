@@ -1,0 +1,10 @@
+/* components/dianzifapiao/dianzifapiao.wxss */
+
+.price{
+  background-color: var(--white);
+	display: flex;
+	align-items: center;
+	min-height: 100rpx;
+	justify-content: space-between;
+  border-top: 1rpx solid #eee;
+}

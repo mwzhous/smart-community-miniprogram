@@ -1,0 +1,58 @@
+/* pages/user/kaipiao/kaipiao.wxss */
+.nav {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    background: #aaaaaa;
+    top: 10rpx;
+    right: 10rpx;
+    width: 160rpx !important;
+    font-size: 18rpx;
+    color: white;
+  }
+
+  &__bottom {
+    position: fixed;
+    background: #f0f1f4;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &__btn {
+      position: absolute;
+      background: #aaaaaa;
+      bottom: 10rpx;
+      right: 30rpx;
+      width: 150rpx !important;
+      font-size: 22rpx;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  border-radius: 8rpx;
+  height: 155rpx;
+
+  &__content {
+    position: absolute;
+    top: 22rpx;
+    left: 80rpx;
+  }
+
+  &__money {
+    position: absolute;
+    bottom: 30rpx;
+    right: 20rpx;
+    font-size: 35rpx;
+  }
+}
+
+.radio {
+  position: absolute;
+  left: 15rpx;
+  top: 50rpx;
+}

@@ -1,0 +1,41 @@
+<!-- 智慧开门 -->
+<view class="flex flex-column">
+  <view class="container">
+    <view class="container__card" wx:for="{{iconList}}" wx:key="id" bindtap="showModal" data-target="menuModal">
+      <image src="../../../images/icon/icon_damen.png" class="container__card__img"></image>
+      <text class="container__card__text">{{item.name}}</text>
+    </view>
+  </view>
+  <view class="btn">
+    <button class="btn__button btn-primary" bindtap="govisitors">访客邀请</button>
+  </view>
+  <view class="btn1">
+    <button class="btn1__button btn-primary" bindtap='gorecord'>开门记录</button>
+  </view>
+  <view class="cu-modal {{modalName=='menuModal'?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <scroll-view scroll-y style="height:300rpx">
+        <view class="cu-list menu text-center flex">
+          <view class="cu-item">
+            <view class="content ">
+              <image src="../../../images/icon/icon_yijiankaimen.png"></image>
+              <text class="text-grey">一键开门</text>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <image src="../../../images/icon/icon_erweima.png"></image>
+              <text class="text-grey">二维码</text>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <image src="../../../images/icon/icon_yaoyiyao.png"></image>
+              <text class="text-grey">摇一摇</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

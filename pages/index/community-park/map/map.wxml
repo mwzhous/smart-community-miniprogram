@@ -1,0 +1,4 @@
+<!--pages/index/community-park/map/map.wxml-->
+<view>
+  <map class="panel-map" longitude="{{longitude}}" latitude="{{latitude}}"  markers="{{markers}}" polyline="{{polyline}}" scale="12"></map>
+</view>

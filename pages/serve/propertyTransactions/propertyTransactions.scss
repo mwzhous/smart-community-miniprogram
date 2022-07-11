@@ -1,0 +1,30 @@
+/* pages/serve/propertyTransactions/propertyTransactions.scss */
+.house {
+    height: 200rpx;
+    background-color: white;
+    margin: 20rpx;
+    border: 1px solid white;
+    border-radius: 30rpx;
+
+    &--img {
+        width: 30%;
+
+        &__size {
+            height: 200rpx;
+            width: 15%;
+            border: 1px solid white;
+            border-radius: 30rpx 0 0 30rpx;
+        }
+    }
+
+    &--text {
+        &__cardsize {
+            width: 100%;
+        }
+        &__tab {
+            border: 1px solid rgba(128, 128, 128, 0.5);
+            border-radius: 20rpx;
+            height: 35rpx;
+        }
+    }
+}

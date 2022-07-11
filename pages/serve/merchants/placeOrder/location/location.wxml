@@ -1,0 +1,50 @@
+<!--pages/serve/merchants/placeOrder/location/location.wxml-->
+<!-- 当前地址 -->
+<view class="ml-3 mt-2 text-bold text-lg ">当前地址:</view>
+<view class="margin-top-sm p-2 m-3 rounded shadow  border-bottom bg-white" style="position: relative;">
+  <view class="cu-item flex pl-5 flex-1">
+    <view class="cu-avatar round lg img" style="background-image: url({{userList.avatar}});"></view>
+    <view class="mt-1 ml-5">
+      <view class="mb-1">{{userList.username}} <text class="text-grey">{{userList.phone}}</text></view>
+      <view class="text-gray text-sm text-cut">
+        {{userList.area}}
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 默认地址 -->
+<view class="ml-3 mt-5 text-bold text-lg ">默认地址</view>
+<view class="margin-top-sm p-2 m-3 rounded shadow  border-bottom bg-white" style="position: relative;"   wx:for="{{addressList}}" wx:if="{{item.status  == 1}}" wx:key="index">
+  <view class="cu-item flex pl-5 flex-1">
+    <view class="cu-avatar round lg img" style="background-image: url({{item.avatar}});"></view>
+    <view class="mt-1 ml-5">
+      <view class="mb-1">{{item.username}} <text class="text-grey">{{item.phone}}</text></view>
+      <view class="text-gray text-sm text-cut">
+        {{item.address}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 备用地址 -->
+<view class="ml-3 mt-5 text-bold text-lg ">备选地址:</view>
+<view class="margin-top-sm p-2 m-3 rounded shadow  border-bottom bg-white" style="position: relative;" wx:for="{{addressList}}" wx:key="index">
+  <view class="cu-item flex pl-5 flex-1">
+    <view class="cu-avatar round lg img" style="background-image: url({{item.avatar}});"></view>
+    <view class="mt-1 ml-5">
+      <view class="mb-1">{{item.username}} <text class="text-grey">{{item.phone}}</text></view>
+      <view class="text-gray text-sm text-cut">
+        {{item.address}}
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 新增地址 -->
+<view class="margin-top-sm p-2 m-3 rounded shadow  border-bottom bg-white" style="position: relative;" bindtap="tapToNewLocation" data-id="{{userList.id}}">
+  <view class="cu-item flex pl-3 flex-1">
+    <view class="cu-avatar cuIcon-roundadd lg cuIcon-plus text"></view>
+    <view class="ml-2 text-bold text-lg flex align-center">新增收货地址</view>
+  </view>
+</view>

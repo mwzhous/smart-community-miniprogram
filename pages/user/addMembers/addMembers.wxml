@@ -1,0 +1,15 @@
+<!--pages/user/addMembers/addMembers.wxml-->
+<!-- 添加成员 -->
+<view class="box shadow">
+  <view class="flex bg-white p-4">
+    <text class="text-black">姓 名</text>
+    <input bindinput="bindNameInput" placeholder="请输入姓名" />
+  </view>
+  <view class="flex bg-white p-4">
+    <text class="text-black ">手机号</text>
+    <input bindinput="bindPhoneInput" placeholder="请输入手机号" />
+  </view>
+  <view>
+    <button class="btn-primary text-white p-3" bindtap="memberAdd">添加</button>
+  </view>
+</view>

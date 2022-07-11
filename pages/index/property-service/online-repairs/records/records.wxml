@@ -1,0 +1,12 @@
+<!--pages/index/property-service/online-repairs/records/records.wxml-->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <view class="records p-3" wx:for="{{records}}" wx:key="id" bindtap="tapToDetail" wx:for="{{records}}" wx:key data-id="{{item.id}}">
+    <view>
+      <text class="font-md" style="font-weight:500;">{{item.repairTitle}}</text>
+      <text class="records__status">{{item.status == 0 ? '待处理' : '已处理'}}</text>
+    </view>
+    <view style="color: gray;">{{item.createTime}}</view>
+    <view style="font-weight:500;" data-id="{{item.id}}">{{item.repairContent}}</view>
+    <image wx:for="{{item.repairImg}}"src="{{item}}" class="records__img m-1" mode="aspectFill" />
+  </view>
+</scroll-view>

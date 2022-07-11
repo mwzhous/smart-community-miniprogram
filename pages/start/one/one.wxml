@@ -1,0 +1,33 @@
+<!--pages/start/one/one.wxml-->
+<swiper class="start square-dot text-primary" indicator-dots="true" indicator-color="#f5820f" circular="true" autoplay="false" interval="5000" duration="500">
+    <swiper-item>
+        <view class="start">
+            <image class="start__img" src="https://crq.oss-cn-beijing.aliyuncs.com/photos/%E5%BC%95%E5%AF%BC%E9%A1%B501.jpg"></image>
+            <!-- <view class="text-primary font-weight-bold font-llg">全新界面</view>
+            <view class="mt-2 text-secondary font-md">界面改版更便捷 安防保卫护家园</view> -->
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="start">
+            <image class="start__img" src="https://crq.oss-cn-beijing.aliyuncs.com/photos/%E5%BC%95%E5%AF%BC%E9%A1%B502.jpg"></image>
+            <!-- <view class="text-primary font-weight-bold font-llg">智慧开门</view>
+            <view class="mt-2 text-secondary font-md">手机代替门禁卡 朋友来访无障碍</view> -->
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="start">
+            <image class="start__img" src="https://crq.oss-cn-beijing.aliyuncs.com/photos/%E5%BC%95%E5%AF%BC%E9%A1%B503.jpg"></image>
+            <!-- <view class="text-primary font-weight-bold font-llg">物业服务</view>
+            <view class="mt-2 text-secondary font-md">物业费用在线缴 房屋问题快速修</view> -->
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="start">
+            <view style="height: 10%;"></view>
+            <image class="start__img1" src="https://crq.oss-cn-beijing.aliyuncs.com/photos/%E5%BC%95%E5%AF%BC%E9%A1%B504.png"></image>
+            <view class="text-primary font-weight-bold font-llg mt-5">社区服务</view>
+            <view class="mt-2 text-secondary font-lg">置顶房产不用愁 邻里资源多共享</view>
+            <button class="btn mt-10" bindtap="goStart">立即体验</button>
+        </view>
+    </swiper-item>
+</swiper>

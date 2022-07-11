@@ -1,0 +1,16 @@
+<!--pages/serve/fleaMarket/onRecord/onRecord.wxml-->
+<!-- 上架记录 -->
+<!-- 展示栏 -->
+<view class="shadow flex house" wx:for="{{recordList}}" wx:key bindtap="tapToPhoneDetail">
+    <view class="house--img">
+        <image src="{{item.thumbnail}}" mode="heightFix" class="house--img__size"></image>
+    </view>
+    <view class="align-center m-2 flex-1 house--text">
+    <view class="flex">
+        <view class="text-lg text-bold house--text__name flex-1">{{item.name}}</view>
+        <view class="border round text-sm pl-1 pr-1 text-orange state">{{item.state}}</view>
+      </view>
+        <view class="text-sm text-grey mt-1 mb-1 house--text__content">{{item.content}}</view>
+        <view class="text-red text-xl text-right ">{{item.price}}</view>
+    </view>
+</view>

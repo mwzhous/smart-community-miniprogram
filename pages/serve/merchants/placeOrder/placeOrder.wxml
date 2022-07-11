@@ -1,0 +1,74 @@
+<!--pages/serve/merchants/placeOrder/placeOrder.wxml-->
+<!-- 用户信息 -->
+<view class="margin-top-sm p-2 m-3 rounded shadow  border-bottom bg-white" style="position: relative;" bindtap="tapToLocation">
+  <view class="cu-item flex pl-3 flex-1">
+    <view class="cu-avatar round lg img" style="background-image: url({{userList.avatar}});"></view>
+    <view class="mt-1 ml-3">
+      <view class="mb-1">{{userList.username}} <text class="text-grey">{{userList.phone}}</text></view>
+      <view class="text-gray text-sm text-cut">
+        {{userList.area}}
+      </view>
+    </view>
+    <view class="cuIcon-right" style="position: absolute; right: 30rpx; top: 40%;"></view>
+  </view>
+</view>
+<!-- 货物信息 -->
+<view class="cu-card dynamic">
+  <view class="cu-item shadow border-bottom pl-3">
+    <view class="cu-list">
+      <view class="text-lg cuIcon-shopfill mt-2 mb-2 ml-1 text-grey"> <text class=" ml-1 text text-lg">沃尔森</text> </view>
+      <!-- 详细信息 -->
+      <view class="flex pb-1 pt-1 border-bottom" wx:for="{{shopList}}" wx:key="index" wx:if="{{item.num !== 0}}" >
+        <view class="cu-avatar xl " style="background-image:url({{item.imgurl}});"></view>
+        <view class="content ml-3 ">
+          <view class="flex">
+            <view class="text-lg flex-1 text-bold mt-1">{{item.name}}</view>
+          </view>
+          <view class="flex  mt-1">
+            <view class="flex-1 texl-xs">
+              <text class="text-red text-lg text-price">{{item.price}}.00</text>/{{item.units}}
+            </view>
+            <view class="text-grey" style="margin-left:180rpx">
+              <text class="text-lg">x{{item.num}}</text>
+              <text class="text-lg text-price ml-2">{{item.num*item.price}}.00</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="p-2" style="float: right;">
+        <view class="text-grey">小计 <text class="text-price text-red pl-2">{{totalPrice}}.00</text></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 支付方式 -->
+<view class="ml-3  text-bold">请选择支付方式</view>
+<!-- 切换付款方式 -->
+<radio-group bindchange="radioChange" class="list">
+  <view class="cu-list menu shadow m-2" style="border-radius: 15rpx 15rpx 15rpx 15rpx;">
+    <view class="cu-item " wx:for="{{communityList}}" wx:key="id" bindchange="gridchange">
+      <navigator class="content" hover-class="none">
+        <image src="{{item.imgUrl}}" class=" avatar ml-2"></image>
+        <text class="text-black ml-2">{{item.name}}</text>
+        <radio class="checkbox orange" checked></radio>
+      </navigator>
+    </view>
+  </view>
+</radio-group>
+<!-- 底部留白 -->
+<view class="bottom-board"></view>
+<!-- 底部结算 -->
+<!-- 底部结算导航栏 -->
+<view class="flex bg-white padding-sm bottom-bar">
+  <view class="flex-1  flex margin-sm text-xl">
+    <view class="ml-2">
+      <text class="text-price text-red text-lg text-bold">{{totalPrice}}.00</text>
+    </view>
+  </view>
+  <view>
+    <button class="btn">选好了</button>
+  </view>
+</view>
+
+<view class="rounded p-1 pb-1 cuIcon-shopfill myshop" bindtap="tapToMyOrder">我的订单</view>

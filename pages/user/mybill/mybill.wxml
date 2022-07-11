@@ -1,0 +1,25 @@
+<!--pages/user/mybill/mybill.wxml-->
+<view class="bgt">
+  <image src="/images/img/bg_qiandao.png" class="bgt__img"></image>
+  <view class="wallet-bg__title p-2" style="{{'top:'+statusBarHeight+';height:' + navigationBarHeight}}">
+    <text bindtap="back" class="cuIcon-back"></text>
+    <view class="tab font-sm">我的账单</view>
+  </view>
+  <view>
+    <view class="bgt__balance text-white text-center">
+      <view class="h1">0.00</view>
+      <view>待缴余额（元）</view>
+    </view>
+      <button class="btn-primary bgt__btn">一键缴费</button>
+  </view>
+</view>
+<view class="wyf bg-white shadow rounded " wx:for="{{pay}}" wx:key="id">
+  <view class="wyf__xie">
+    <text class="wyf__xie__dingdan">订单编号：{{item.number}}</text>
+  </view>
+  <view class="wyf__month">
+    <text class="font-md">{{item.name}}</text>
+    <view class="wyf__month__money text-primary font">¥ {{item.money}}</view>
+  </view>
+  <text class="wyf__zhifu text-primary font-sm">{{item.state}}</text>
+</view>

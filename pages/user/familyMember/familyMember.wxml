@@ -1,0 +1,17 @@
+<!--家庭成员-->
+<view class="cu-list menu card-menu radius shadow bg-white mt-2" wx:for="{{family}}" wx:key="id">
+    <view class="cu-item family">
+        <view class="content">
+            <view class="text-black">{{item.name}}</view>
+            <view class="text-gray text-sm flex">
+                <text class="text-gray  margin-right-xs">{{item.phone}}</text>
+            </view>
+        </view>
+        <view class="action">
+            <image src="/images/icon/ICON_EDIT2.png" class="png" mode="aspectFit" bindtap="setMembers" data-id="{{item.id}}" data-name="{{item.name}}" data-phone="{{item.phone}}"></image>
+        </view>
+    </view>
+</view>
+<view class="btn">
+    <button class="btn-primary" bindtap="addMembers">添加成员</button>
+</view>

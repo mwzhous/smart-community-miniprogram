@@ -1,0 +1,7 @@
+{
+  
+  "usingComponents": {
+      "staring":"/components/staring/staring"
+  },
+  "navigationBarTitleText": "报修详情"
+}

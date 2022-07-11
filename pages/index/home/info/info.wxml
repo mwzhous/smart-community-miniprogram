@@ -1,0 +1,10 @@
+<!--pages/index/home/info/info.wxml-->
+<view class="card p-2">
+    <view class="card__content" bindtap="goDetail"  wx:for="{{infoList}}" wx:key data-id="{{item.id}}">
+      <image src="{{item.imageUrl}}" class="card__content__img" mode="aspectFill">
+      </image>
+      <view class="card__content__desc">
+        <view class="card__desc__text1">{{item.title}}</view>
+      </view>
+    </view>
+  </view>

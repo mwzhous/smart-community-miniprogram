@@ -1,0 +1,20 @@
+<!--components/pagination/pagination.wxml-->
+<scroll-view class="scroll" style="{{style}}" scroll-y="true" bindscroll="onScroll" refresher-enabled="{{true}}"
+  bindrefresherrefresh="onPullDown" refresher-triggered="{{triggered}}" lower-threshold="{{50}}"
+  bindscrolltolower="onPullUp">
+
+  <!-- 插槽：列表区 -->
+  <slot></slot>
+
+
+  <!-- 上拉加载中 -->
+  <view class="loadmore" hidden="{{!isLoadMoreing}}">
+    <view class="loadmore-icon"></view>
+    <view class="loadmore-tips">正在加载</view>
+  </view>
+
+  <!-- 底线 -->
+  <view wx:if="{{scrollTop>0 && isNoMore}}" class="bot-line">
+    <text class="bot-line-text"> {{botLineText}}</text>
+  </view>
+</scroll-view>

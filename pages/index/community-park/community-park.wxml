@@ -1,0 +1,71 @@
+<!--pages/index/community-park/community-park.wxml-->
+<view class="flex flex-column p-2">
+  <view>
+    <view class="down bg-orange">
+      <view class="up bg-white">
+        <view>
+          <image class="cg" src="../../../images/icon/icon_chewei.png"></image>
+        </view>
+        <view class="cgz" bindtap="tpToCommunity">
+          <txet class="font text-body">车位管理</txet>
+          <view class="font-sm text-gray mt-2">管理自己车位</view>
+        </view>
+      </view>
+    </view>
+    <view class="down ml-4 color-qblue">
+      <view class="up bg-white">
+        <view>
+          <image class="cg" src="../../../images/icon/icon_guibing.png"></image>
+        </view>
+        <view class="cgz" bindtap="tapToVIP">
+          <text class="font text-body">贵宾邀请</text>
+          <view class="font-sm text-gray mt-2">邀请朋友来访</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="py-4 fj">
+    <text>附近停车场</text>
+  </view>
+  <view wx:for="{{parkList}}" class="fujin mt-2">
+    <view class="left text-white shadow" bindtap="showModal1" data-target="Park"  id="{{item.parkingId}}">
+      <view class="ws">{{item.carports}}</view>
+      <view class="font mt-3">剩余车位</view>
+    </view>
+    <view class="right bg-white shadow">
+      <view class="flex-1" bindtap="showModal1"  id="{{item.parkingId}}" data-target="Park">
+        <view class="text-body my-2">{{item.communityName}}</view>
+        <text class="font-sm text-border">{{item.distant}}km</text>
+        <view class="mt-2 text-gray font-sm">总车位数 {{item.totalCarports}}</view>
+      </view>
+      <view>
+        <view class="btn" bindtap="showModal" data-longitude="{{item.longitude}}" data-latitude="{{item.latitude}}">
+          <image class="btn__img" src="../../../images/icon/icon_dinwei.png" />
+        </view>
+        <!-- <view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+          <view class="cu-dialog">
+            <view class="cu-bar bg-white">
+              <view class="action text-green">确定</view>
+              <view class="action text-gray">选择地图</view>
+              <view class="action text-blue" bindtap="hideModal">取消</view>
+            </view>
+            <view class="map padding-xl">
+              <view bindtap="tapToMap">苹果地图</view>
+            </view>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <view class="cu-modal {{modalName=='Park'?'show':''}}" bindtap="hideModal" wx:if="{{!park}}">
+    <view class="cu-dialog bg-white rounded">
+      <view class="padding-xl">
+        您没有可用车位是否租聘车位
+      </view>
+      <view class="cu-bar">
+        <view class="action flex-sub solid-left" bindtap="tapToPark">取消</view>
+        <view class="action flex-sub solid-left text-red" bindtap="tapToRental">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/communication/detail/detail.wxml-->
+
+<view class="cu-card dynamic">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{detail.avatar}});"></view>
+        <view class="content flex-sub">
+          <view>{{detail.username}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{detail.createTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content padding">
+      {{detail.content}}
+    </view>
+    <view class="grid flex-sub padding-lr">
+      <view class="bg-img" wx:if="{{detail.banner.length == 1}}">
+        <image mode="aspectFill" src="{{detail.banner}}"></image>
+      </view>
+      <view class="bg-banner" wx:if="{{detail.banner.length == 2 || detail.banner.length == 4}}">
+        <image wx:for="{{detail.banner}}" wx:for-index="key" wx:for-item="item1" mode="aspectFill" src="{{item1}}"></image>
+      </view>
+      <view wx:if="{{detail.banner.length == 3 || detail.banner.length > 4}}" class="bg-banner1">
+        <image wx:for="{{detail.banner}}" wx:for-index="key" wx:for-item="item1" mode="aspectFill" src="{{item1}}"></image>
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right px-5 py-3 flex justify-between">
+
+      <view><text class="cuIcon-appreciate" bindtap="dianzan"></text> <text class="ml-1">{{detail.favorite}}</text></view>
+      <view><text class="cuIcon-favor" bindtap="shouchang"></text> <text class="ml-1">{{detail.collect}}</text></view>
+      <view><text class="cuIcon-message"></text> <text class="ml-1">{{detail.remark}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{commentList.length != 0}}" class="cu-card dynamic mx-3" style="background-color: #fff !important;">
+  <view class="cu-list menu-avatar comment">
+    <view class="title px-2">全部评论</view>
+    <view class="cu-item" wx:for="{{commentList}}" wx:key>
+      <view class="cu-avatar round" style="background-image:url({{item.avatar}});"></view>
+      <view class="content bg-white">
+        <view class="text-grey">{{item.username}}</view>
+        <view class="text-gray text-content text-df">
+          {{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="nav">
+  <view class="cu-bar bg-white search mt-3 nav__bottom">
+    <view class="search-form radius">
+      <input type="text" placeholder="请输入评论..." bindinput="bindcontent" value="{{content}}"></input>
+    </view>
+    <button class="nav__bottom__btn" style="width: 150rpx; margin-right: 20rpx;" bindtap="submit">发布</button>
+  </view>
+</view>

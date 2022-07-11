@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "component": true,
+  "usingComponents": {
+    "card": "/components/dxdCard/dxdCard",
+    "cooperation": "/components/cooperation/cooperation",
+    "twohand" : "/components/twohand/twohand",
+    "pinche" : "/components/pinche/pinche"
+  }
+}

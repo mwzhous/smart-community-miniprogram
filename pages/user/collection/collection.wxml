@@ -1,0 +1,81 @@
+<!--我的收藏-->
+<scroll-view scroll-x class="bg-white nav">
+	<view class="flex text-center">
+		<view class='cu-item flex-sub {{currentData == 0 ? "text-orange cur" : ""}}' data-current="0" bindtap="checkCurrent">
+			咨讯
+		</view>
+		<view class='cu-item flex-sub {{currentData == 1 ? "text-orange cur" : ""}}' data-current="1" bindtap="checkCurrent">
+			社区交流
+		</view>
+		<view class='cu-item flex-sub {{currentData == 2 ? "text-orange cur" : ""}}' data-current="2" bindtap="checkCurrent">
+			房产收藏
+		</view>
+		<view class='cu-item flex-sub {{currentData == 3 ? "text-orange cur" : ""}}' data-current="3" bindtap="checkCurrent">
+			商品收藏
+		</view>
+	</view>
+	<!-- 页面 -->
+	<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+		<!-- 资讯 -->
+		<swiper-item>
+			<view class="shadow flex house border" wx:for="{{consulting}}" wx:key="id">
+				<view class="house--img">
+					<image src="{{item.newsCover}}" mode="heightFix" class="house--img__size"></image>
+				</view>
+				<view class=" flex-1 m-2 position-relative">
+					<view class="text-xl">{{item.newsTitle}}</view>
+					<view class="text-gray text-sm flex justify-between bg-red align-center">
+						<view class="position-absolute bottom-0 cuIcon-profile">: {{item.username}}</view>
+						<view class="position-absolute bottom-0 right-0 cuIcon-time">{{item.createTime}}</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<!-- 社区交流 -->
+		<swiper-item>
+			<view class="shadow flex house" wx:for="{{consulting}}" wx:key="id">
+				<view class="house--img">
+					<image src="{{item.newsCover}}" mode="heightFix" class="house--img__size"></image>
+				</view>
+				<view class=" flex-1 m-2 position-relative">
+					<view class="text-xl">{{item.newsTitle}}</view>
+					<view class="text-gray text-sm flex justify-between bg-red align-center">
+						<view class="position-absolute bottom-0 cuIcon-profile">: {{item.username}}</view>
+						<view class="position-absolute bottom-0 right-0 cuIcon-time">{{item.createTime}}</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<!-- 房产收藏 -->
+		<swiper-item>
+			<view class="shadow flex house border" wx:for="{{house}}" wx:key="id" bindtap="tapToFangchan" data-id="{{item.id}}">
+				<view class="house--img">
+					<image src="{{item.imageUrl}}" mode="heightFix" class="house--img__size"></image>
+				</view>
+				<view class="flex flex-column flex-1 algin-center">
+					<view class="flex justify-between p-2 m-1">
+						<view class="text-bold text-xl text-cut pr-4">{{item.title}}</view>
+						<view class="text-price text-red text-xl">{{item.price}}</view>
+					</view>
+					<view class="flex justify-between text-grey p-2">
+						<view class="cuIcon-locationfill">{{item.address}}</view>
+						<view class="yuan">元/m²</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<!-- 商品收藏 -->
+		<swiper-item>
+			<view class="shadow flex house border" wx:for="{{goods}}" wx:key data-id="{{item.id}}" bindtap="tapToPhoneDetail">
+				<view class="house--img">
+					<image src="{{item.thumbnail}}" mode="heightFix" class="house--img__size"></image>
+				</view>
+				<view class="align-center p-2 overflow-hidden">
+					<view class="text-lg text-bold pb-2  text-ellipsis">{{item.name}}</view>
+					<view class="text-sm text-grey pb-2 text-ellipsis">{{item.content}}</view>
+					<view class="text-red text-xl text-right text-price">{{item.price}}</view>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+</scroll-view>

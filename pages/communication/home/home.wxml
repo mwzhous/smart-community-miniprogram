@@ -1,0 +1,18 @@
+<!--pages/communication/home/home.wxml-->
+<!-- 顶部选项卡 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==currentId?'text-orange cur':''}}" wx:for="{{TabCur}}" bindtap="tabSelect" data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+<card wx:for="{{gcList}}"  wx:if="{{currentId === 0}}" card="{{item}}"></card>
+<cooperation wx:for="{{HdList}}"  wx:if="{{currentId === 1}}" card="{{item}}"></cooperation>
+<twohand wx:for="{{EsList}}"  wx:if="{{currentId === 2}}" card="{{item}}"></twohand>
+<pinche wx:for="{{PcList}}"  wx:if="{{currentId === 3}}" card="{{item}}"></pinche>
+<view class='cu-tabbar-height'></view>
+</scroll-view>
+
+

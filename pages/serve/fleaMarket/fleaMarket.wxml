@@ -1,0 +1,32 @@
+<!-- 跳蚤市场 -->
+<!-- 上拉下拉 -->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <!-- 顶部广告板 -->
+  <view class="bg-img">
+    <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/bank.png"></image>
+  </view>
+  <!-- 社区服务功能区 -->
+  <view class="container flex margin-left-l margin-right-l margin-top-l">
+    <view class=" flex-sub text-center" wx:for="{{goodStyleList}}" wx:key bindtap="tapToPage" data-title="{{item.title}}">
+      <view class="cu-avatar img-size round" style="background-image:url({{item.imageUrl}});">
+      </view>
+      <view class="text margin-top-xs ">{{item.title}}</view>
+    </view>
+  </view>
+
+  <!-- 展示栏-->
+  <view bindtap="goDetail" class="shadow flex house mt-2" wx:for="{{fleaMarketGoods}}" data-id="{{item.id}}" wx:key>
+    <view class="house--img">
+      <image src="{{item.thumbnail}}" mode="heightFix" class="house--img__size"></image>
+    </view>
+    <view class="align-center m-2 flex-1 house--text">
+      <view class="text-lg text-bold house--text__name">{{item.name}}</view>
+      <view class="text-sm text-grey mt-1 mb-1 house--text__content">{{item.content}}</view>
+      <view class="text-red text-xl text-right ">{{item.price}}</view>
+    </view>
+  </view>
+  <view class="bottom--whiteboard"></view>
+  <!-- 上架模块 -->
+
+</scroll-view>
+<shelves></shelves>

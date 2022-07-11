@@ -1,0 +1,11 @@
+<!--pages/user/home/personalData/bindDD/bindDD.wxml-->
+<view class="page">
+  <view  class="container">
+    <image src="/images/icon/dingding.png" class="container__photo rounded-50"></image>
+    <view class="p-2">已绑定钉钉</view>
+  </view>
+  <view class="p-4 text-gray">
+    <text>您可以点击下方按钮解除当前钉钉的绑定，或绑定新的钉钉号</text>
+  </view>
+  <button class="btn-primary">解除绑定</button>
+</view>

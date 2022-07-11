@@ -1,0 +1,14 @@
+<!-- 上滑下滑 -->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}"      bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}" style="height: 98vh;">
+<!-- 展示栏 -->
+<view class="shadow flex house" wx:for="{{computerList}}" wx:key data-id="{{item.id}}" bindtap="tapToPhoneDetail">
+  <view class="house--img">
+    <image src="{{item.thumbnail}}" mode="heightFix" class="house--img__size"></image>
+  </view>
+  <view class="align-center m-2 flex-1 house--text">
+    <view class="text-lg text-bold house--text__name">{{item.name}}</view>
+    <view class="text-sm text-grey mt-1 mb-1 house--text__content">{{item.content}}</view>
+    <view class="text-red text-xl text-right ">{{item.price}}</view>
+  </view>
+</view>
+</scroll-view>

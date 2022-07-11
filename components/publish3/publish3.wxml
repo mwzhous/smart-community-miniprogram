@@ -1,0 +1,38 @@
+<!--components/publish3/publish3.wxml-->
+
+<view class="bg-white">
+  <view class="price">
+		<view  style="color: #3b3b3b;">原价</view>
+    <text class="text-price text-through" style="color: #cfd0cf; margin-left: 60rpx;"></text>
+		<input class="text-through" style="margin-right: 210rpx;" placeholder-style="color: #cfd0cf; text-decoration: line-through;" bindinput="bindpriceyuan" placeholder="请输入原价"></input>
+	</view>
+  <view class=" nowprice margin-top">
+		<view  style="color: black;">现价</view>
+    <text class="text-price text-red" style="padding-left: 60rpx;"></text>
+		<input style="margin-right: 210rpx;" bindinput="bindprice" placeholder-style="color: #cfd0cf;"placeholder="请输入现价"></input>
+	</view>
+</view>
+<view class="container">
+    <view class="content padding">
+      <textarea placeholder="请输入内容" bindinput="bindcontent" name='describe' />
+    </view>
+    <view class="picture margin-top">
+	</view>
+  <view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="add-container" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-add"></text>
+			</view>
+		</view>
+	</view>
+	<button class="btn-primary" bindtap="submit">发布</button>
+</view>
+
+
+

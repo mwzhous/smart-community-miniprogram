@@ -1,0 +1,81 @@
+.login {
+  .title-item {
+    height: 80rpx;
+    line-height: 80rpx;
+  }
+  .cur {
+    border-bottom: 1.5px solid orange;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150rpx 0px;
+
+    image {
+      width: 135rpx;
+      height: 135rpx;
+    }
+  }
+
+  .input_content {
+    margin: 0rpx 30rpx;
+    padding: 20rpx;
+    background-color: #fff;
+    border-radius: 15rpx;
+
+    .top {
+      display: flex;
+      align-items: center;
+      border-bottom: 1rpx solid #f6f6f6;
+      margin-left: 11px;
+
+      .icon {
+        width: 40rpx;
+        height: 40rpx;
+      }
+      .youjian {
+        width: 40rpx;
+        height: 30rpx;
+      }
+      input {
+        margin: 15px 10px;
+      }
+
+      &__send {
+        float: right;
+        margin-left: 110rpx;
+        margin-top: -20rpx;
+      }
+    }
+  }
+
+  .forget-pw {
+    float: right;
+    color: #bdbdbe;
+    font-size: 28rpx;
+    margin-bottom: 40rpx;
+    margin-top: -10rpx;
+  }
+
+  .login-3 {
+    margin-top: 120rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+      width: 100rpx;
+      height: 100rpx;
+      margin: 40rpx 30rpx;
+    }
+  }
+}
+

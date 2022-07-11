@@ -1,0 +1,10 @@
+<!--pages/communication/publish/publish.wxml-->
+<view class="padding flex align-center justify-between">
+  <button class="cu-btn bg-white {{index==currentId?'text-orange text-border cur':''}}" wx:for="{{TabCur}}" wx:key bindtap="buttonSelect" data-id="{{index}}" style="margin-right: 20rpx;">{{item.name}}
+    <image wx:if="{{index==currentId}}" src="/images/icon/icon_gouxuan.png" style="width: 30rpx; height: 30rpx; position: absolute; margin-left: 132rpx; top: 52rpx;" mode="widthFix"></image>
+  </button>
+</view>
+<button1 wx:if="{{currentId === 0}}"></button1>
+<button2 wx:if="{{currentId === 1}}"></button2>
+<button3 wx:if="{{currentId === 2}}"></button3>
+<button4 wx:if="{{currentId === 3}}"></button4>

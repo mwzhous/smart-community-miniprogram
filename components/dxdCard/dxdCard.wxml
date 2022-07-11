@@ -1,0 +1,37 @@
+<!--colorui/components/dxd-card/dxd-card.wxml-->
+<view class="cu-card dynamic">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{card.avatar}});"></view>
+        <view class="content flex-sub">
+          <view>{{card.username}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{card.createTime}}
+          </view>
+        </view>
+      </view>
+      <view bindtap="onDetail" class="text-content padding-lr">
+        {{card.content}}
+      </view>
+      <view bindtap="onDetail" class="grid flex-sub padding-lr mt-2">
+        <view class="bg-img" wx:if="{{card.banner.length == 1}}">
+          <image mode="aspectFill" src="{{card.banner}}"></image>
+        </view>
+        <view class="bg-banner" wx:if="{{card.banner.length == 2 || card.banner.length == 4}}">
+          <image wx:for="{{card.banner}}" wx:for-index="key" wx:for-item="item1" mode="aspectFill" src="{{item1}}"></image>
+        </view>
+        <view wx:if="{{card.banner.length == 3 || card.banner.length > 4}}"class="bg-banner1">
+          <image wx:for="{{card.banner}}" wx:for-index="key" wx:for-item="item1" mode="aspectFill" src="{{item1}}"></image>
+        </view>
+      </view>
+      <view class="text-gray text-sm text-right px-5 py-3 flex justify-between">
+
+        <view><text class="cuIcon-appreciate" bindtap="dianzan"></text> <text class="ml-1">{{card.favorite}}</text></view>
+        <view><text class="cuIcon-favor" bindtap="shouchang"></text> <text class="ml-1">{{card.collect}}</text></view>
+        <view><text class="cuIcon-message"></text> <text class="ml-1">{{card.remark}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

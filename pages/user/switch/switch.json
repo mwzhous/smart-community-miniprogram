@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pagination": "../../../components/pagination/pagination"
+  },
+  "navigationBarTitleText": "切换小区"
+}

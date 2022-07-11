@@ -1,0 +1,23 @@
+<!--components/publish1/publish1.wxml-->
+<view class="container">
+    <view class="content padding">
+      <textarea placeholder="请输入内容" bindinput="bindcontent" name='describe' />
+    </view>
+    <view class="picture margin-top">
+	</view>
+  <view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="add-container" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+				<text class="cuIcon-add"></text>
+			</view>
+		</view>
+	</view>
+	<button class="btn-primary mt-10" bindtap="submit">发布</button>
+</view>
+

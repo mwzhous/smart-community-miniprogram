@@ -1,0 +1,30 @@
+<!--pages/serve/fleaMarket/phone/phone.wxml-->
+<!-- 顶部导航栏 -->
+<view class="contain">
+  <view class="select_box" wx:for="{{ selectList }}" wx:key="">
+    <view class="select_tab {{ showIndex == index ? 'active' : '' }} {{item.active?'active':''}}" data-id="{{index}}" bindtap="chooseTab">
+      <view>{{ item.active || item.name }}</view>
+      <text class="{{item.icon}}" wx:if="{{ showIndex == index }}"></text>
+      <text class="{{item.icon}}" wx:if="{{ showIndex != index }}"></text>
+    </view>
+    <scroll-view scroll-y="" class="option_list {{ showIndex == index ? 'slidedown' : 'slideup'}}">
+      <view wx:for="{{ item.list }}" wx:for-item="val" wx:for-index="idx" wx:key="val.id" class="option_item {{item.active == val.content?'active_option':''}}" data-index="{{index}}" data-value="{{val.content}}" bindtap="chooseOption">{{ val.content }}</view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 上滑下滑 -->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}"      bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}" style="height: 98vh;">
+<!-- 展示栏 -->
+<!-- 顶部留白 -->
+<view class="top-board"></view>
+<view class="shadow flex house" wx:for="{{phoneList}}" wx:key data-id="{{item.id}}" bindtap="tapToPhoneDetail">
+  <view class="house--img">
+    <image src="{{item.thumbnail}}" mode="heightFix" class="house--img__size"></image>
+  </view>
+  <view class="align-center m-2 flex-1 house--text">
+    <view class="text-lg text-bold house--text__name">{{item.name}}</view>
+    <view class="text-sm text-grey mt-1 mb-1 house--text__content">{{item.content}}</view>
+    <view class="text-red text-xl text-right ">{{item.price}}</view>
+  </view>
+</view>
+</scroll-view>

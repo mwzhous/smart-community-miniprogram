@@ -1,0 +1,18 @@
+<!--components/serviceFunction/serviceFunction.wxml-->
+<view class="container flex margin-left-l margin-right-l margin-top-l" >
+  <view class="flex-sub text-center">
+    <view class="cu-avatar xl round" style="background-image:url(/images/icon/icon_fcjy.png);">
+    </view>
+    <view class="text margin-top-xs">房产交易</view>
+  </view>
+  <view class="flex-sub text-center">
+    <view class="cu-avatar xl round" style="background-image:url(/images/icon/icon_tiaozaoshichang.png);">
+    </view>
+    <view class="text margin-top-xs">跳蚤市场</view>
+  </view>
+  <view class=" flex-sub text-center">
+    <view class="cu-avatar xl round" style="background-image:url(/images/icon/icon_xiaoqushangjia.png);">
+    </view>
+    <view class="text margin-top-xs ">小区商家</view>
+  </view>
+</view>

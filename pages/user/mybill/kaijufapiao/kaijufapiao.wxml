@@ -1,0 +1,29 @@
+<!--pages/user/kaijufapiao/kaijufapiao.wxml-->
+<view class="padding" style="color: #ccccce;">请选择发票类型</view>
+<view class="bg-white flex" style="padding-top: 20rpx;padding-bottom: 30rpx;">
+  <button class="bg-white btn {{currentId==0?'text-orange text-border cur':''}}"   bindtap="buttonSelect" data-id="0" style="width: 300rpx;margin-right: 20rpx;">
+    电子发票
+    <view class="text-sm">
+    最快5分钟开具
+    </view>
+  </button>
+  
+  <image wx:if="{{currentId==0}}" src="/images/icon/icon_gouxuan.png" style="width: 30rpx;height: 30rpx; position: absolute; margin-left: 340rpx;margin-top: 100rpx;" mode="widthFix"></image>
+ 
+  <button class="bg-white btn {{currentId==1?'text-orange text-border cur':''}}" bindtap="buttonSelect" data-id="1" style="width: 300rpx;margin-left: 20rpx;">
+  纸质发票
+  <view class="text-sm">
+    预计5天内送达
+    </view>
+  </button>
+  <image wx:if="{{currentId==1}}" src="/images/icon/icon_gouxuan.png" style="width: 30rpx;height: 30rpx;position: absolute;right: 0;margin-right: 50rpx;margin-top: 100rpx" mode="widthFix"></image>
+</view>
+<view class="bg-white padding text-df" style="color: #d1d1d1;margin-top: -30rpx;margin-left: 20rpx;" wx:if="{{currentId==0}}">
+  电子发票与纸质发票具有同等法律效力，可支持报销入账
+</view>
+<view class="bg-white padding text-df" style="color: #d1d1d1;margin-top: -30rpx;margin-left: 20rpx;" wx:if="{{currentId==1}}">
+  电子发票与纸质发票具有同等法律效力，可支持报销入账，推荐
+  <text style="color: #f49330;">使用电子发票</text>
+</view>
+<fapiao1 wx:if="{{currentId==0}}"></fapiao1>
+<fapiao2 wx:if="{{currentId==1}}"></fapiao2>

@@ -1,0 +1,35 @@
+<!--pages/index/property-service/online-repairs/details/details.wxml-->
+<form>
+  <view class="detail">
+    <view class="flex detail__name">
+      <text class="pt-1 pl-1 text-xxl">{{record.username}}</text>
+      <text class="p-2 text-gray">({{record.phone}})</text>
+      <text class="detail__status">{{item.status == 0 ? '待处理' : '已处理'}}</text>
+    </view>
+    <view class="flex detail__time pl-1 pb-1">
+      <text class="text-gray">{{record.orderTime}}</text>
+      <text class="text-red">{{record.address}}</text>
+    </view>
+    <view class="pb-1 pl-1">{{record.repairContent}}</view>
+    <image wx:for="{{record.repairImg}}" src="{{item}}" class="detail__img" mode="aspectFill" />
+    <view class="detail__revert">
+      <view class="flex detail__revert__back mb-2">
+        <text>物业回复:</text>
+        <text>{{record.createTime}}</text>
+      </view>
+      <text class="text-xl">{{record.repairResult}}</text>
+    </view>
+    <view class="flex p-2" >
+  <text style="margin-top: 10rpx;">星级评价：</text>
+
+  <staring bind:click="change"  rating="1" style="margin-left: 20rpx;"></staring>
+
+</view>
+    <view class="flex p-1">
+      <view class="font pl-1" style="width: 200rpx;">文字评价：</view>
+      <textarea disabled="{{modalName!=null}}" maxlength="-1" placeholder="请输入您的评价" class="p-2 border text-gray" bindinput="bindcontent" value="{{repairAssess}}">
+      </textarea>
+    </view>
+    <button class="detail__btn bg-primary text-white" bindtap="submit">发表评论</button>
+  </view>
+</form>

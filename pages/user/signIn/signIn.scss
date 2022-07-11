@@ -1,0 +1,148 @@
+/* pages/user/signIn/signIn.wxss */
+.sign {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    color: white;
+    display: flex;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+
+    &__tab {
+      margin-left: 42%;
+      align-self: center;
+    }
+  }
+  // 垂直居中
+  .cuIcon-back {
+    align-self: center;
+  }
+
+  &__balance {
+    position: absolute;
+    top: 130rpx;
+    left: 0;
+    right: 0;
+  }
+  &__exponse {
+    margin-top: -85rpx;
+    background-color: #333;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 350rpx;
+    left: 0;
+    right: 0;
+    width: 350rpx !important;
+    height: 95rpx;
+    border-radius: 200rpx;
+    color: #a51a05;
+    background: #fcce27;
+    font-size: 40rpx;
+    border: 1px solid white;
+  }
+  &__btn1 {
+    position: absolute;
+    top: 350rpx;
+    left: 0;
+    right: 0;
+    width: 350rpx !important;
+    height: 95rpx;
+    border-radius: 200rpx;
+    color: #646464;
+    background: #fafafa;
+    font-size: 40rpx;
+    border: 1px solid rgb(199, 198, 198);
+  }
+
+  &__state {
+    position: absolute;
+    bottom: 180rpx;
+    left: 0;
+    right: 0;
+  }
+}
+
+.scroll-x {
+  white-space: nowrap;
+  display: flex;
+}
+
+.view__item {
+  display: inline-block;
+  padding: 5rpx;
+  &__time {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    background: #fff2e5;
+    border: 1px solid #f7d2ab;
+  }
+
+  &__time1 {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border: 1px solid white;
+  }
+
+  &__hint {
+    width: 100rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+}
+
+/* 隐藏scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.weui-cell-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 6rpx;
+}
+.line {
+  width: 43%;
+  height: 2rpx;
+  background: #d5d8dd;
+}
+.dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 4rpx;
+  background: #d5d8dd;
+}
+/*圆点背景色变为蓝色****** */
+.dotActive {
+  background: #f3973d;
+}
+.line-name {
+  font-size: 30rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "投诉建议",
+
+  "usingComponents": {
+    "sumbit": "/components/submit/submit"
+  }
+}

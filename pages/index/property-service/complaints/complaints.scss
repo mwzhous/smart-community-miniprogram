@@ -1,0 +1,35 @@
+/* pages/index/property-service/complaints/complaints.wxss */
+.cont {
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 3%;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  color: gray;
+  width: 94%;
+  height: 300rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  position: relative;
+  background-color: #fff;
+}
+
+.jw {
+  width: 92% !important;
+  margin-left: 3%;
+  padding-top: 20rpx;
+  border-top: 1px rgb(204, 204, 204) solid ;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.btn {
+  width: 92% !important;
+  height: 80rpx;
+  color: white;
+  text-align: center;
+  line-height: 2;
+  margin-top: 80rpx;
+  border-radius: 10rpx;
+  background-color: #f49330;
+}

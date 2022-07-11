@@ -1,0 +1,108 @@
+/* pages/index/community-park/community-park.wxss */
+@import 'style/variables.scss';
+
+.color-qblue {
+  background-color: $iconBlue;
+}
+
+// 下层橙蓝色
+.down {
+  width: 330rpx;
+  height: 160rpx;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 7px;
+  float: left;
+}
+
+// 上白
+.up {
+  width: 323rpx;
+  height: 160rpx;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space: normal;
+  position: relative;
+}
+
+// 图片定位
+.cg {
+  width: 80rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 20rpx;
+}
+
+// 字体定位
+.cgz {
+  position: absolute;
+  top: 30rpx;
+  left: 100rpx;
+  margin-left: 30rpx;
+}
+
+.btn {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-top: 60rpx;
+
+  &__img {
+    width: 70rpx;
+    height: 70rpx;
+  }
+}
+
+.dinwei {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.fujin {
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  width: 180rpx;
+  height: 180rpx;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  float: left;
+  background-color: #03bd87;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  text-align: left;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.text-border {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #9f9f9f;
+  width: 140rpx;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.ws {
+  font-size: 40rpx;
+}
+
+.map {
+  color: rgb(3, 80, 245)
+}
+.solid {
+  border: 1rpx solid rgba(0, 0, 0, 0.5);
+}

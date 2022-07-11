@@ -1,0 +1,27 @@
+/* pages/start/one/one.wxss */
+@import 'style/variables.scss';
+.start {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background: #fff;
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+    &__img1 {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.btn {
+    background-color: $primary;
+    color: #fff;
+    width: 43% !important;
+    font-weight: 500;
+    font-size: 34rpx;
+    margin: 30rpx auto;
+    padding: 20rpx;
+    border-radius: 50px;
+}

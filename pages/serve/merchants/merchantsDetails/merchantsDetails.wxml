@@ -1,0 +1,74 @@
+<!--pages/serve/merchants/merchantsDetails/merchantsDetails.wxml-->
+<!-- 顶部商家介绍栏 -->
+<view class="shadow flex house">
+  <view class="house--img">
+    <image src="{{goods.imgurl}}" mode="heightFix" class="house--img__size mt-2"></image>
+  </view>
+  <view class="flex flex-wrap align-center m-2 flex-1 house--text">
+    <view class="flex justify-between house--text__cardsize">
+      <view class="flex justify-between" style="width: 100%;">
+        <view class="text-bold text-xl">{{goods.name}}</view>
+        <view wx:if="{{goods.status == 0}}" class="text-orange text-xs pl-1 pr-1 mt-1 ml-1 house--text__tab" style="border:1px solid orange">营业中</view>
+        <view wx:else="" class="text-grey text-xs pl-1 pr-1 mt-1 ml-1 house--text__tab">未营业</view>
+      </view>
+    </view>
+    <view class="text-grey" style="width: 100%;">起送
+      <text class="text-price"></text>20
+      配送
+      <text class="text-price"></text>4
+    </view>
+    <view class="text-grey text-sm">{{goods.intro}}</view>
+  </view>
+</view>
+<!-- 垂直导航栏以及全部商品 -->
+<view class="border-top">
+  <ul>
+    <li><a class=" {{currentData == 0 ? 'active' : ''}}" data-current="0" bindtap="checkCurrent" href="#All">全部</a></li>
+    <li><a class="{{currentData == 1 ? 'active' : ''}}" data-current="1" bindtap="checkCurrent" href="#Snacks">零食</a></li>
+    <li><a class="{{currentData == 2 ? 'active' : ''}}" data-current="2" bindtap="checkCurrent" href="#Fruites">水果</a></li>
+    <li><a class="{{currentData == 3 ? 'active' : ''}}" data-current="3" bindtap="checkCurrent" href="#Vegetables">蔬菜</a></li>
+  </ul>
+  <!-- 全部商品 -->
+  <view style="margin-left:25%;padding:1px 16px;height:100%; background-color:white;">
+    <view class="mt-2 font-sm font-lack">全部</view>
+    <!-- 商品展示区域 -->
+    <view wx:for="{{goodsList}}" wx:key class="cu-list menu-avatar mt-3 mb-3" wx:for-item="item" wx:for-index="index">
+      <view class="flex">
+        <view class="cu-avatar xl " style="background-image:url({{item.imgurl}});"></view>
+        <view class="content ml-3">
+          <view class="flex">
+            <view class="text-lg flex-1 text-bold">{{item.name}}</view>
+            <view class="text-grey text-xs mt-1">库存{{item.sales}}份</view>
+          </view>
+          <view class="text-gray text-xs mt-1">
+            月售{{item.sales}}
+          </view>
+          <view class="flex  mt-1">
+            <view class="flex-1 texl-xs">
+              <text class="text-red text-lg text-price">{{item.price}}</text>/{{item.units}}
+            </view>
+            <view class="ml-5 pl-5">
+              <image src="/images/icon/icon_jianshao.png" style="width: 30rpx; height:30rpx;" data-num="{{item.num}}" id="{{item.id}}" bindtap="minus" data-index="{{index}}"></image>
+              <text class="text-xl text-bold"> {{item.num}} </text>
+              <image src="/images/icon/icon_tianjia2.png" style="width: 30rpx; height:30rpx;" data-num="{{item.num}}"  data-id="{{item.id}}"  bindtap="plus" data-index="{{index}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="height:10vh; width:100%"></view>
+  </view>
+</view>
+<!-- 底部结算导航栏 -->
+<view class="flex bg-white padding-sm bottom-bar">
+  <view class="flex-1  flex margin-sm text-xl">
+    <view class="cuIcon-cartfill text-orange xxl"></view>
+    <view class="ml-2">
+      <text class="text-price text-red text-lg text-bold">{{price}}.00</text>
+      <view class="text-sm">配送费4元</view>
+    </view>
+  </view>
+  <view>
+    <button class="btn" bindtap="tapToXiaDan">选好了</button>
+  </view>
+</view>

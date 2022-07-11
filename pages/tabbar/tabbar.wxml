@@ -1,0 +1,41 @@
+<!--pages/tabbar/tabbar.wxml-->
+<navbar wx:if="{{PageCur=='communication'}}" title="{{value}}" bgColor="#f5820f">
+  <view class="ml-3">
+    <text class="cuIcon-add rounded-50 bg-white text-primary" bindtap="publishChange"></text>
+  </view>
+</navbar>
+<navbar wx:if="{{PageCur == 'serve'}}" title="{{value}}" bgColor="#f5820f">
+</navbar>
+<navbar wx:if="{{PageCur == 'user'}}" title="个人中心" bgColor="#f5820f">
+  <text class="cuIcon-noticefill text-white ml-2" bindtap="goMessage"></text>
+</navbar>
+<index class="content-bar" wx:if="{{PageCur=='index'}}"></index>
+<serve class="content-bar" wx:if="{{PageCur=='serve'}}"></serve>
+<communication class="content-bar" wx:if="{{PageCur=='communication'}}"></communication>
+<user class="content-bar" wx:if="{{PageCur=='user'}}"></user>
+<view class="cu-bar tabbar bg-white shadow foot ">
+  <view class="action" bindtap="NavChange" data-cur="index">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/icon_sy{{PageCur=='index'?'_active':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='index'?'text-primary':'text-gray'}} mt-1">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="serve">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/icon_sqfw{{PageCur=='serve'?'_active':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='serve'?'text-primary':'text-gray'}} mt-1">社区服务</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="communication">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/icon_sqjl{{PageCur=='communication'?'_active':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='communication'?'text-primary':'text-gray'}} mt-1">社区交流</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="user">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/icon_grzx{{PageCur=='user'?'_active':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='user'?'text-primary':'text-gray'}} mt-1">个人中心</view>
+  </view>
+</view>

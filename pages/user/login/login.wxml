@@ -1,0 +1,67 @@
+<!--pages/user/login/login.wxml-->
+<!-- 登录 -->
+<view class="login">
+  <view class="logo">
+    <image src="https://ossstored.oss-cn-shanghai.aliyuncs.com/md-pic/45_%E7%99%BB%E5%BD%95_03.png"></image>
+  </view>
+
+  <scroll-view scroll-x class="nav">
+    <view class="flex justify-center text-gray">
+      <view class='mx-5 title-item {{currentData == 0 ? "text-orange cur" : ""}}' data-current="0"  bindtap="checkCurrent">
+        短信验证码登录
+      </view>
+      <view class='mx-5 title-item {{currentData == 1 ? "text-orange cur" : ""}}' data-current="1" bindtap="checkCurrent">
+        账号密码登录
+      </view>
+    </view>
+    <!-- 页面 -->
+    <swiper current="{{currentData}}" bindchange="bindchange">
+      <swiper-item>
+        <view class="input_content shadow">
+          <view class="top">
+            <image src="/images/icon/modift_phone_05.png" class="icon" />
+            <input bindinput="bindTelInput" value="{{phone}}" placeholder="请输入手机号" />
+          </view>
+          <view class="top">
+            <image src="/images/icon/icon_youjian.png" class="youjian" />
+            <input bindinput="bindCodeInput" placeholder="请输入验证码" />
+            <text class="top__send text-primary" bindtap="sendCode" wx:if="{{countDownNum == 60 || countDownNum == -1}}">
+              发送验证码
+            </text>
+            <text class="top__send text-primary" wx:else>
+              {{countDownNum}}s后重新获取
+            </text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="input_content shadow">
+          <view class="top">
+            <image src="/images/icon/modift_phone_05.png" class="icon" />
+            <input bindinput="bindInput" value="{{account}}" placeholder="请输入账号" />
+          </view>
+          <view class="top">
+            <image src="/images/icon/modift_phone_06.png" class="icon" />
+            <input bindinput="bindAccountInput" type="password" value="{{password}}" placeholder="请输入密码" />
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </scroll-view>
+
+  <view class="forget-pw mx-4" bindtap="forgetPassword">忘记密码?</view>
+  <button bindtap="login" class="btn-primary" wx:if="{{currentData === 0}}">登 录</button>
+  <button bindtap="accountLogin" class="btn-primary" wx:else>登 录</button>
+
+  <view>
+    <view class="login-3 text-gray">
+      第三方登录
+    </view>
+    <view class="three">
+       <image src="/images/icon/weixin.png" class="three__icon" />
+     <!-- <image src="/images/icon/login_QQ.png" class="three__icon" /> -->
+      <image bindtap="dingdingLogin" src="/images/icon/dingding.png" class="three__icon" />
+      <image bindtap="githubLogin" src="/images/icon/github.png" class="three__icon" />
+    </view>
+  </view>
+</view>

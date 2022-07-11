@@ -1,0 +1,52 @@
+<!--components/publish4/publish4.wxml-->
+<view class="bg-white" style="margin-right: 20rpx; margin-left: 20rpx;">
+	<view class="cu-form-group">
+		<view class="title">是否有车</view>
+		<switch checked="{{isCar}}" bindchange="changeBool"></switch>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">出发时间</view>
+		<picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">地点</view>
+		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">终点</view>
+		<picker mode="region" bindchange="RegionChange1" value="{{region1}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region1}}
+			</view>
+		</picker>
+	</view>
+</view>
+<view class="container" style="margin-top: 30rpx;">
+	<view class="content padding">
+		<textarea placeholder="请输入内容" bindinput="bindcontent" name='describe' />
+	</view>
+	<view class="picture margin-top">
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="add-container" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-add"></text>
+			</view>
+		</view>
+	</view>
+	<button class="btn-primary" bindtap="submit">发布</button>
+</view>

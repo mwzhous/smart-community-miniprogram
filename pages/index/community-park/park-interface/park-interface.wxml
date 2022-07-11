@@ -1,0 +1,68 @@
+<!--pages/index/community-park/park-interface/park-interface.wxml-->
+<form class="bg">
+  <view>
+    <view class="park rounded-top pt-2">{{name}}</view>
+    <view class="inter">
+      <view class="inter__title">选择区号:</view>
+      <picker bindchange="ParkChange" value="{{park}}" range="{{parking}}">
+        <view class="picker">
+          {{park?parking[park]:'请选择'}}
+        </view>
+      </picker>
+    </view>
+    <view class="inter">
+      <view class="inter__title">选择位号:</view>
+      <picker bindchange="CarChange" value="{{car}}" range="{{stall}}">
+        <view class="picker">
+          {{car?stall[car]:'请选择'}}
+        </view>
+      </picker>
+    </view>
+    <view class="inter rounded-bottom">
+      <view class="inter__title">输入车牌号:</view>
+      <input bindinput="codeValue" placeholder="请输入车牌号"></input>
+    </view>
+  </view>
+  <view class="btn">
+    <button class="bg-blue radius" bindtap="putParkStart">临时停车</button>
+    <button class="btn__rental" bindtap="tapToRental">租聘</button>
+  </view>
+  <view>
+    <view class="flex justify-end mr-4 text-blue" bindtap="showModal" data-target="Park">
+      停车规则
+    </view>
+    <view class="modal {{modalName=='Park'?'show':''}}" bindtap="hideModal">
+      <scroll-view class="scroll bg-white rounded" scroll-y="true" style="height: 80%;">
+        <view>
+          <text class="h2 text-black">{{charge.name}}</text>
+          <text class="cuIcon-close bg-red fr mt-4 rounded-50" bindtap="hideModal"></text>
+        </view>
+        <view class="flex justify-end">更新时间：{{charge.updateTime}}</view>
+        <view class="font-lg text-black pt-1" style="font-weight: 600;">未超过24小时</view>
+        <view class="text-black pt-2">场景一:停了100分钟免费时长设置的是{{charge.freeTime}}分钟,首段时长是{{charge.firstPeriod}}分钟,收费{{charge.firstAmount}}元,单位间隔是10分钟收费{{charge.unitAmount}}元那么计费规则为</view>
+        <view class="pt-2">1. 先减去免费时间{{charge.freeTime}}分钟 剩余时间 = 100-减首段收费时间剩余时间 = {{100-charge.freeTime}} - {{charge.firstPeriod}} = {{100-charge.freeTime-charge.firstPeriod}} 分钟收费 =
+          0 + {{charge.firstAmount}} = {{charge.firstAmount}}元</view>
+        <view class="pt-2">2. 计算间隔时间收费 收费 = 0 + {{charge.firstAmount}} + {{(100-charge.freeTime-charge.firstPeriod)/10}} x {{charge.unitAmount}} = {{charge.firstAmount+(100-charge.freeTime-charge.firstPeriod)/10*charge.unitAmount}}元</view>
+        <view class="font-lg text-black pt-1" style="font-weight: 600;">超过24小时 设置了24小时封顶</view>
+        <view class="text-black pt-2">场景二:停了48小时50分钟,免费时长设置的是{{charge.freeTime}}分钟,首段时长是{{charge.firstPeriod}}分钟,收费{{charge.firstAmount}}元,单位间隔是10分钟收费{{charge.unitAmount}}元,24小时封顶收费为{{charge.cappingAmount}}元,那么计费规则为：</view>
+        <view class="pt-2">1. 先减去免费时间{{charge.freeTime}}分钟 剩余时间 = 48小时50分钟 - {{charge.freeTime}}分钟 = 48小时{{50-charge.freeTime}}分钟 收费 = 0元</view>
+        <view class="pt-2">2. 减去封顶时间段 因为48小时满足两次封顶,所以计费规则为： 剩余时间 = 48小时{{50-charge.freeTime}}分钟 - 48小时
+          ={{50-charge.freeTime}} 分钟 收费金额 = 0 + {{charge.cappingAmount}} x 2 = {{charge.cappingAmount*2}}元</view>
+        <view class="pt-2">3. 减去首段收费时间 剩余时间 = {{50-charge.freeTime}}分钟 - {{charge.firstPeriod}} = {{50-charge.freeTime-charge.firstPeriod}} 分钟 收费 = {{charge.cappingAmount*2}} + {{charge.firstAmount}} = {{(charge.cappingAmount*2+charge.firstAmount)}}元</view>
+        <view class="pt-2">4. 计算间隔时间收费 收费 = {{(charge.cappingAmount*2+charge.firstAmount)}} + ( {{50-charge.freeTime-charge.firstPeriod}} ÷ 10) x {{charge.unitAmount}} = {{(charge.cappingAmount*2+charge.firstAmount)+ ((50-charge.freeTime-charge.firstPeriod)/10)*charge.unitAmount}}元</view>
+        <view class="font-lg text-black pt-1" style="font-weight: 600;">超过24小时 未设置24小时封顶</view>
+        <view class="text-black pt-2">场景三:停了48小时50分钟,免费时长设置的是{{charge.freeTime}}分钟,首段时长是{{charge.firstPeriod}}分钟,收费{{charge.firstAmount}}元,单位间隔是10分钟收费{{charge.unitAmount}}元,24小时封顶未设置,那么计费规则为：</view>
+        <view class="pt-2">1. 先减去免费时间{{charge.freeTime}}分钟 剩余时间 = 48小时50分钟 - {{charge.freeTime}}分钟 = 48小时{{50-charge.freeTime}}分钟 收费 = 0元</view>
+        <view class="pt-2">2.减去首段收费时间 剩余时间 = 48小时{{50-charge.freeTime}}分钟 - {{charge.firstPeriod}}分钟 = 48小时{{50-charge.freeTime-charge.firstPeriod}}分钟 收费 = 0 + {{charge.firstAmount}} = {{charge.firstPeriod}}元</view>
+        <view class="pt-2">3.计算间隔时间收费 收费 = {{charge.firstAmount}} + ((48 * 60 + {{50-charge.freeTime-charge.firstPeriod}}) ÷ 10) x {{charge.unitAmount}} = {{charge.firstAmount+((2880+(50-charge.freeTime-charge.firstPeriod))/10)*charge.unitAmount}}元</view>
+        <view class="font-lg text-black pt-1" style="font-weight: 600;">详情解释</view>
+        <view class="pt-2">1. 免费时长就是要减免的时长 比如免费时长{{charge.freeTime}}分钟 那停了40分钟,就只需要(40-{{charge.freeTime}}) = {{40-charge.freeTime}}分钟的钱</view>
+        <view class="pt-2">2. 24小时封顶就是每24小时收费多少的意思,但是只对开启了24小时封顶才生效 比如24小时封顶
+          {{charge.cappingAmount}}元,那停了49个小时,就是2 * {{charge.cappingAmount}} + 1个小时的钱</view>
+        <view class="pt-2">3. 首段时长/分钟
+          首段价格/元这个就是超出免费时间以后，第一段（首段时长）需要收费的金额（首段金额）间隔收费时长（分钟）
+          间隔收费金额（元）这个就是减去免费时间和首段时长以后,每(单位时间)需要收费的金额（间隔收费金额）</view>
+      </scroll-view>
+    </view>
+  </view>
+</form>

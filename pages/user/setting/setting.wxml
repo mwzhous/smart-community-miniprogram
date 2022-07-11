@@ -1,0 +1,19 @@
+<!--pages/user/setting/setting.wxml-->
+<!-- 设置页面 -->
+<view>
+  <view class="cu-list menu pt-3">
+    <view class="cu-item arrow" wx:for="{{module}}" wx:key="id" wx:for-item="item" wx:for-index="index">
+      <view class="content" bindtap="goDetails" data-moduleId="{{index}}">
+        <text class="text-black">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu">
+    <view class="cu-item arrow" wx:for="{{module1}}" wx:key="id" wx:for-item="item" wx:for-index="index">
+      <view class="content" bindtap="goDetails1" data-moduleId="{{index}}">
+        <text class="text-black">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <button bindtap="logout" class="btn bg-white text-black mt-10 shadow">退出登录</button>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/user/home/alerts/propertyMessage/propertyMessage.wxml-->
+<view class="cu-item shadow rounded m-2 p-2 card" wx:for="{{message}}" wx:key>
+  <view class="flex mb-2">
+    <view>{{item.name}}</view>
+    <view class="time text-sm">
+      {{item.time}}
+    </view>
+  </view>
+  <view class="text-cut">
+    {{item.content}}
+  </view>
+</view>

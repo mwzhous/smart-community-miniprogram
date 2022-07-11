@@ -1,0 +1,51 @@
+<!--pages/index/property-service/online-repairs/online-repairs.wxml-->
+<form>
+  <view class="repairs margin-top">
+    <view class="title">联系人</view>
+    <input placeholder="请输入姓名" placeholder-style="color:#b6b6b6;"  bindinput="bindusername"></input>
+  </view>
+  <view class="repairs">
+    <view class="title">联系电话</view>
+    <input placeholder="请输入手机号" placeholder-style="color:#b6b6b6;"  bindinput="bindphone"></input>
+  </view>
+  <view class="repairs">
+    <view class="title">地址</view>
+    <input placeholder="请输入地址" placeholder-style="color:#b6b6b6;"  bindinput="bindaddress"></input>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class="title">预约时间</view>
+    <picker mode="time" value="{{time}}" start="08:00" end="18:00" bindchange="TimeChange">
+      <view class="picker">
+        {{time}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">报修选择</view>
+    <picker bindchange="RepairsChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        {{index?picker[index]:'请选择报修类型'}}
+      </view>
+    </picker>
+  </view>
+  <view class="container">
+    <view class="padding border-bottom">
+      <textarea placeholder="请输入内容" style="height: 200rpx;" bindinput="textareaBInput" name='describe' />
+    </view>
+    <view class="cu-form-group mt-2">
+      <view class="grid col-3 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="add-container bg-gray" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+          <text class="cuIcon-add"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="btn-primary mt-5" bindtap="pushRepair">提交</button>
+  <button class="btn-primary" bindtap="tapToRecords">查看报修记录</button>
+</form>

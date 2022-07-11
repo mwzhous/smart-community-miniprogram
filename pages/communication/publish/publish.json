@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "发布",
+  "usingComponents": {
+    "submit" : "/components/submit/submit",
+    "button1" : "/components/publish1/publish1",
+    "button2" : "/components/publish2/publish2",
+    "button3" : "/components/publish3/publish3",
+    "button4" : "/components/publish4/publish4"
+  }
+}

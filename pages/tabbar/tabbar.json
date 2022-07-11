@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "index": "/pages/index/home/home",
+    "serve": "/pages/serve/home/home",
+    "communication": "/pages/communication/home/home",
+    "user": "/pages/user/home/home",
+    "navbar": "/components/navbar/navbar"
+  },
+  "navigationStyle": "custom"
+}

@@ -1,0 +1,88 @@
+/* pages/serve/merchants/merchants.wxss */
+@import "style/variables.scss";
+.swiper__index{
+  &__content{
+    height: 200rpx;
+  }
+}
+.bg-img {
+    // width: 100%;
+    height: 300rpx;
+    width: 100vw;
+}
+
+.img-size {
+    width: 110rpx;
+    height: 110rpx;
+}
+
+.bg-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    height: 100vh;
+    background-color: #eaecf0;
+}
+
+.content {
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 6px;
+
+    &__box {
+        height: 150rpx;
+        margin: 10px;
+
+        &__img {
+            width: 130px;
+            height: 100%;
+        }
+    }
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.house {
+    height: 200rpx;
+    background-color: white;
+    margin: 20rpx;
+    border: 1px solid white;
+    border-radius: 30rpx;
+
+    &--img {
+        width: 30%;
+
+        &__size {
+            height: 200rpx;
+            width: 15%;
+            border: 1px solid white;
+            border-radius: 30rpx 0 0 30rpx;
+        }
+    }
+
+    &--text {
+        &__cardsize {
+            width: 100%;
+        }
+
+        &__tab {
+            border: 1px solid rgba(128, 128, 128, 0.5);
+            border-radius: 20rpx;
+            height: 35rpx;
+        }
+    }
+}
+
+.myshop {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    width: 7vw;
+    background-color: rgba(245, 117, 4, 0.7);
+    color: white;
+}

@@ -1,0 +1,35 @@
+<!--pages/index/security/security.wxml-->
+<!-- 智慧安防 -->
+<!-- 切换的Tab卡 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class='cu-item flex-sub {{currentData == 0 ? "text-orange cur" : ""}}' data-current="0" bindtap="checkCurrent">
+      公共监控
+    </view>
+    <view class='cu-item flex-sub {{currentData == 1 ? "text-orange cur" : ""}}' data-current="1" bindtap="checkCurrent">
+      私人监控
+    </view>
+  </view>
+  <!-- 页面 -->
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <!-- 公共监控 -->
+    <swiper-item>
+      <view class="container">
+        <view class="container__card" wx:for="{{monitoring}}" wx:key="id" bindtap="showModal" data-target="menuModal">
+          <image src="{{item.url}}" class="container__card__img"></image>
+          <text class="container__card__text">{{item.content}}</text>
+        </view>
+      </view>
+    </swiper-item>
+    <!-- 私人监控 -->
+    <swiper-item>
+      <view class='swiper_con content radius shadow bg-white ' wx:for="{{monitoring}}" wx:key="id">
+        <view class="content__box m-2">
+          <view class="content__box__img">
+            <image src="{{item.logo}}" class="img"></image>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</scroll-view>

@@ -1,0 +1,69 @@
+<!--pages/serve/merchants/merchants.wxml-->
+<!-- 小区商家 -->
+<!-- 顶部广告板 -->
+<!-- <view class="bg-img">
+    <image src="https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/soft-training-2022-5/bank.png"></image>
+</view> -->
+<view class="">
+  <swiper class="screen-swiper square-dot swiper__index__content" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{photoList}}" wx:key="id">
+      <image src="{{item.photo}}" mode="aspectFill">
+      </image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 社区服务功能区 -->
+<view class="container flex  mt-2">
+  <view class="flex-sub text-center" bindtap="tapToPhone">
+    <view class="cu-avatar img-size round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_shouji.png);">
+    </view>
+    <view class="text margin-top-xs">手机</view>
+  </view>
+  <view class="flex-sub text-center">
+    <view class="cu-avatar img-size round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_diannao.png);">
+    </view>
+    <view class="text margin-top-xs">电脑</view>
+  </view>
+  <view class=" flex-sub text-center">
+    <view class="cu-avatar img-size round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_youxi.png);">
+    </view>
+    <view class="text margin-top-xs ">游戏</view>
+  </view>
+  <view class=" flex-sub text-center">
+    <view class="cu-avatar img-size round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_shuma.png);">
+    </view>
+    <view class="text margin-top-xs ">数码</view>
+  </view>
+  <view class=" flex-sub text-center">
+    <view class="cu-avatar img-size round" style="background-image:url(https://crq.oss-cn-beijing.aliyuncs.com/photos/icon_gongju.png);">
+    </view>
+    <view class="text margin-top-xs ">工具</view>
+  </view>
+</view>
+
+<!-- 展示栏 -->
+<view wx:for="{{goodsList}}" class="shadow flex house" bindtap="tapToShop" data-id='{{item.id}}'>
+  <view class="house--img">
+    <image src="{{item.imgurl}}" mode="heightFix" class="house--img__size"></image>
+  </view>
+  <view class="flex flex-wrap align-center m-2 flex-1 house--text">
+    <view class="flex justify-between house--text__cardsize">
+      <view class="flex justify-between" style="width: 100%;">
+        <view class="text-bold text-xl">{{item.name}}</view>
+        <view wx:if="{{item.status == 0}}" class="text-orange text-xs pl-1 pr-1 mt-1 ml-1 house--text__tab" style="border:1px solid orange">营业中</view>
+        <view wx:else="" class="text-grey text-xs pl-1 pr-1 mt-1 ml-1 house--text__tab">未营业</view>
+      </view>
+    </view>
+    <view class="flex justify-between text-grey house--text__cardsize">
+      <view class="">月售 {{item.sales}} 单</view>
+      <view class="">2.1KM 15分钟</view>
+    </view>
+    <view class="text-grey">起送
+      <text class="text-price"></text>20
+      配送
+      <text class="text-price"></text>4
+    </view>
+  </view>
+</view>
+
+<view class="rounded p-1 pb-1 cuIcon-shopfill myshop" bindtap="tapToMyShop">我的店铺</view>

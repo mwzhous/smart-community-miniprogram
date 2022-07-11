@@ -1,0 +1,53 @@
+.user-bg {
+  background-size: cover;
+  height: 280rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+  &__sign {
+    position: absolute;
+    top: 50rpx;
+    right: -25rpx;
+    background: #f5820f;
+    color: white;
+    height: 60rpx;
+    width: 150rpx;
+    border-radius: 30rpx;
+  }
+  &__shezhi {
+    position: absolute;
+    top: 130rpx;
+    right: -25rpx;
+    background: #f5820f;
+    color: white;
+    height: 60rpx;
+    width: 150rpx;
+    border-radius: 30rpx;
+  }
+
+  &__login {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+  }
+}
+
+.user-bg text {
+  opacity: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 35rpx;
+}
+
+.png {
+  padding: 10rpx;
+}
+

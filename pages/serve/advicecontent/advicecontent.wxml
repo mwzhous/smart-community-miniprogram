@@ -1,0 +1,18 @@
+<!--pages/serve/advicecontent/advicecontent.wxml-->
+  <view class="bg-white rounded pb-3" style="margin-top: 20rpx; margin-left: 20rpx; margin-right: 20rpx;"wx:for="{{AdviceList}}" wx:key="id">
+      <view class="padding text-content" style="color: #c7c7c7;">
+        {{item.createTime}}
+      </view>
+      <view  class="padding" style="margin-top: -40rpx;" bindtap="getDetail" data-id="{{item.id}}">
+      {{item.complainContent}}
+      </view>
+      <view class="flex">
+        <image wx:for="{{item.complainImg}}" src="{{item}}" style="width: 200rpx;height: 200rpx; margin-left: 30rpx;"></image>
+      </view>
+  </view>
+  <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+
+

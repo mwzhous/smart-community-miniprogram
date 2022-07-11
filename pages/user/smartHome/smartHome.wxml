@@ -1,0 +1,49 @@
+<!--pages/user/smartHome/smartHome.wxml-->
+<view class="position-relative">
+  <view class="position-absolute box1 shadow rounded p-2 bg-white" wx:if="{{isStatus}}">
+    <view class="cu-list flex" wx:for="{{familys}}" wx:key="id" id="{{item.id}}" bindtap="switch">
+      <view class="cu-item flex-1">{{item.name}}</view>
+      <view class="flex text-gray font-sm justify-center align-center">点击切换</view>
+    </view>
+  </view>
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view bindtap="bindStatus" class="text-black">
+        <text>{{family}}</text>
+        <text class="cuIcon-triangledownfill font font-weight-bold"></text>
+      </view>
+      <view>
+        <text class="font-sm ">南京：33° 晴</text>
+      </view>
+      <view class="font-weight-bold">
+        <text class="cuIcon-scan font-md m-1" bindtap="scanCode"></text>
+        <text class="cuIcon-add font-lg m-1" bindtap="addEquipment"></text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu">
+    <view class="cu-item ">
+      <view class="font-weight-bold font-md">常用</view>
+      <view class="bg-gray shadow rounded p-1">
+        <text class="cuIcon-list font-md m-1"></text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="box shadow rounded m-2 p-4 bg-white " wx:for="{{equipment}}" wx:key="index" bindtap="deviceDetail" data-deviceSerial="{{item.deviceSerial}}">
+      <view>
+        <view class="flex">
+          <view class="flex-1">
+            {{item.equipmentName}}
+          </view>
+          <view class="text-gray font-sm text-right">
+            {{item.validateCode}}
+          </view>
+        </view>
+        <view class="pt-2">
+          <view>{{item.deviceSerial}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

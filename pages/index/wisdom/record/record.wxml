@@ -1,0 +1,12 @@
+<!-- <text>pages/index/record/record.wxml</text> -->
+<view class="content padding-tb-sm flex" wx:for="{{card}}" wx:key="id">
+  <view class="content__left m-1">
+    <text style="font-weight: 600;">{{item.name}}</text>
+    <view class="text-gray text-sm mt-2">
+      <text>{{item.time}}</text>
+    </view>
+  </view>
+  <view class="text-red content__right">
+    <text>{{item.operation}}</text>
+  </view>
+</view>

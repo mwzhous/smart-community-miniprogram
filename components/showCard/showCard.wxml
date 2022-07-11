@@ -1,0 +1,16 @@
+<!--components/dynamicCard/dynamicCard.wxml-->
+<view class="cu-card article" >
+    <view class="cu-item shadow" wx:for="{{shopList}}" wx:key="id">
+        <view class="content margin-top-sm" >
+            <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+            <view style="width: 60%;">
+                <view class="text-black text-bold">{{item.title}}
+                </view>
+                <view class="solid-bottom text-sm padding-xs">
+                    <text class="text-grey">{{item.content}}</text>
+                </view>
+                <view class="text-price text-red text-xl text-right">{{item.price}}</view>
+            </view>
+        </view>
+    </view>
+</view>

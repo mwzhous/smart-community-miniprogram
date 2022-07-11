@@ -1,0 +1,50 @@
+/* pages/index/property-service/property-service.wxss */
+@import 'style/variables.scss';
+.color-qblue {
+  background-color: $iconBlue;
+}
+.color-blue {
+  background-color: $iconPurple;
+}
+.color-green {
+  background-color: $iconGreen;
+}
+.color-pink {
+  background-color: $iconPink;
+}
+.down {
+  width: 320rpx;
+  height: 160rpx;
+  margin-top: 30rpx;
+  margin-left: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 7px;
+  float: left;
+}
+.up {
+  width: 313rpx;
+  height: 160rpx;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space:normal;
+}
+text {
+  font-size: 20rpx;
+}
+image {
+  width: 90rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.wenzi {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  view {
+    margin-top: 20rpx;
+  }
+}

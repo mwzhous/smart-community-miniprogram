@@ -1,0 +1,5 @@
+<!--components/staring/staring.wxml-->
+<view class="flex-row">
+  <image src="{{item==1?'/images/icon/icon_x1.png':'/images/icon/icon_x2.png'}}" class="star" style="width:{{starWidth}}rpx;height:{{starWidth}}rpx" wx:for="{{stars}}" wx:key="index"  
+  catchtap="{{readOnly?'':'choseStar'}}" data-index="{{index}}"></image>
+</view>

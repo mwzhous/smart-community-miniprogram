@@ -1,0 +1,48 @@
+/* pages/index/wisdom/visitors/visitors.wxss */
+.angle {
+  &__card {
+    height: 150rpx;
+    width: 28%;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10rpx;
+  }
+
+  &__image {
+    height: 30rpx;
+    width: 30rpx;
+    position: absolute;
+    margin-left: 190rpx;
+    top: 130rpx;
+  }
+}
+
+.text-border {
+  border: 1px solid #f5820f;
+}
+
+.box {
+  margin-top: 30rpx;
+}
+
+.box button {
+  width: 90% !important;
+  position: fixed; // 使按钮固定于可视窗口的底部
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+}
+.box text {
+  width: 140rpx;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid #a0a0a0;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  font-family: sans-serif;
+}

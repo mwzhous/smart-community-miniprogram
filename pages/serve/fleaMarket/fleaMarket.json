@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "user-info": "/components/userInfo/userInfo",
+    "show-card": "/components/showCard/showCard",
+    "dynamic-card": "/components/dynamicCard/dynamicCard",
+    "service-function": "/components/serviceFunction/serviceFunction",
+    "shelves":"/components/shelves/shelves"
+  },
+  "navigationBarTitleText": "跳蚤市场"
+}

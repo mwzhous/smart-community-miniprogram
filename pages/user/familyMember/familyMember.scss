@@ -1,0 +1,24 @@
+/* pages/user/familyMember/familyMember.wxss */
+.family {
+  height: 150rpx;
+}
+
+.png {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.btn {
+  position: fixed; // 使按钮固定于可视窗口的底部
+  bottom: 10rpx;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+
+  &__button {
+    background: #f7860c;
+    color: #fdf1ec;
+    height: 70rpx;
+    width: 90% !important;
+  }
+}

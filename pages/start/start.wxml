@@ -1,0 +1,22 @@
+<!--pages/index/home/start/start.wxml-->
+<!-- <text>pages/index/home/start/start.wxml</text> -->
+
+<view class="start_1">
+            <view class="start-title">
+                    <view class="title-left">网络<span>互联，一起来！</span></view>
+                    <view class="title-right">
+                        <view class="title-right-top">有福相聚，<span>一起来!</span></view>
+                    </view>                
+            </view>
+
+            <view class="start_bottom_Img">
+                <image src="/images/img/icon.png"></image>
+                <view class="start_fulailai_title">
+                    <view class="start_fulailai">
+                        <text>福莱来</text>
+                        <text>—FULLAILAI—</text>
+                    </view>
+                    <view class="start_property">业主端</view>
+                </view>
+            </view> 
+</view>

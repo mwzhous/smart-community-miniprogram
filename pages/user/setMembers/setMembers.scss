@@ -1,0 +1,25 @@
+/* pages/user/setMembers/setMembers.wxss */
+.box {
+  margin-top: 30rpx;
+
+  &__edit {
+    width: 90% !important;
+    position: fixed; // 使按钮固定于可视窗口的底部
+    bottom: 170rpx;
+    left: 0;
+    right: 0;
+  }
+
+  &__delete {
+    width: 90% !important;
+    position: fixed;
+    bottom: 35rpx;
+    left: 0;
+    right: 0;
+  }
+
+  text {
+    width: 120rpx;
+  }
+}
+

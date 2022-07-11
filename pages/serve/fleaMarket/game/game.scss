@@ -1,0 +1,43 @@
+/* pages/serve/fleaMarket/game/game.wxss */
+.house {
+  height: 200rpx;
+  background-color: white;
+  margin: 20rpx;
+  border: 1px solid white;
+  border-radius: 30rpx;
+
+  &--img {
+    width: 30%;
+
+    &__size {
+      height: 200rpx;
+      width: 15%;
+      border: 1px solid white;
+      border-radius: 30rpx 0 0 30rpx;
+    }
+  }
+
+  &--text {
+    &__name {
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden; //溢出内容隐藏
+      text-overflow: ellipsis; //文本溢出部分用省略号表示
+      display: -webkit-box; //特别显示模式
+      -webkit-line-clamp: 1; //行数
+      line-clamp: 2;
+      -webkit-box-orient: vertical; //盒子中内容竖直排列
+    }
+
+    &__content {
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden; //溢出内容隐藏
+      text-overflow: ellipsis; //文本溢出部分用省略号表示
+      display: -webkit-box; //特别显示模式
+      -webkit-line-clamp: 2; //行数
+      line-clamp: 2;
+      -webkit-box-orient: vertical; //盒子中内容竖直排列
+
+    }
+  }
+
+}

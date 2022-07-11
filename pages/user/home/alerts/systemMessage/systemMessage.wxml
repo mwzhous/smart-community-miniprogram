@@ -1,0 +1,12 @@
+<!--pages/user/home/alerts/systemMessage/systemMessage.wxml-->
+<view class="cu-item shadow rounded m-2 p-2">
+  <view class="flex mb-2">
+    <view>福来来官方欢迎您,"...</view>
+    <view class="time text-sm">
+      2019-12-3 19:01:33
+    </view>
+  </view>
+  <view>
+    折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环
+  </view>
+</view>

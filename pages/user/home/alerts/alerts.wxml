@@ -1,0 +1,8 @@
+<!--pages/user/home/alerts/alerts.wxml-->
+<view class="cu-list menu mt-2">
+  <view class="cu-item arrow" wx:for="{{module}}" wx:key="id" wx:for-item="item" wx:for-index="index">
+    <view class="content" bindtap="goDetails" data-moduleId="{{index}}">
+      <text class="text-black">{{item.title}}</text>
+    </view>
+  </view>
+</view>

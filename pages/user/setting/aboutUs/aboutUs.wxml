@@ -1,0 +1,5 @@
+<!--pages/user/setting/aboutUs/aboutUs.wxml-->
+<view>
+  <view class="ahout text-red p-1">关于福来来</view>
+  <view class="m-1 p-1">福来来是一款专门为社区安全和物业管理服务而打造的互联网应用平台，它为业主量身定制了各种丰富多彩的移动互联网应用，为小区住户提供一个安全、舒适、和谐的现代只能生活</view>
+</view>

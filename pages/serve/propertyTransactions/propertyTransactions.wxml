@@ -1,0 +1,25 @@
+<!--pages/serve/propertyTransactions/propertyTransactions.wxml-->
+<!-- 房产交易 -->
+<!-- 竖向滚动 -->
+<!--  refresher-enabled 打开下拉刷新 -->
+<!-- bindrefresherrefresh： 触发下拉刷新事件 -->
+<!-- refresher-triggered ：控制下拉刷新展示-->
+<scroll-view scroll-y="true" bindscrolltolower="scrolltolower" refresher-enabled="{{true}}" style="height: 100vh;" bindrefresherrefresh="refresherrefresh" refresher-triggered="{{triggered}}">
+  <view class="shadow flex house" wx:for="{{estateTransaction}}" wx:key="id" bindtap="tapToFangchan" data-id="{{item.id}}">
+    <view class="house--img">
+      <image src="{{item.imageUrl}}" mode="heightFix" class="house--img__size"></image>
+    </view>
+    <view class="flex flex-wrap align-center m-2 flex-1 house--text">
+      <view class="flex justify-between house--text__cardsize">
+        <view class="flex justify-between">
+          <view class="text-bold text-xl text-cut" style="width: 30vw;">{{item.title}}</view>
+        </view>
+        <view class="text-price text-red text-xxl">{{item.price}}</view>
+      </view>
+      <view class="flex justify-between text-grey house--text__cardsize" style="margin-top: -30rpx;">
+        <view class=" cuIcon-locationfill">{{item.address}}</view>
+        <view class="">元/m²</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

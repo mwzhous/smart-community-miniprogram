@@ -1,0 +1,21 @@
+/* components/pinche/pinche.wxss */
+.bg-banner{
+  image {
+    width: 300rpx;
+    height: 300rpx;
+    object-fit: cover;
+    border-radius: 3px;
+    float: left;
+    margin: 5rpx;
+  }
+}
+.bg-banner1{
+  image {
+    width: 200rpx;
+    height: 200rpx;
+    object-fit: cover;
+    border-radius: 3px;
+    float: left;
+    margin: 5rpx;
+  }
+}

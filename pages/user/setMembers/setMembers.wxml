@@ -1,0 +1,16 @@
+<!--pages/user/setMembers/setMembers.wxml-->
+<!-- 修改成员信息 -->
+<view class="box shadow">
+  <view class="flex bg-white p-4">
+    <text class="text-black">姓 名</text>
+    <input bindinput="bindNameInput" placeholder="请输入姓名" value="{{name}}"/>
+  </view>
+  <view class="flex bg-white p-4">
+    <text class="text-black ">手机号</text>
+    <input bindinput="bindPhoneInput" placeholder="请输入手机号" value="{{phone}}"/>
+  </view>
+  <view>
+    <button class="bg-primary text-white p-3 box__edit" bindtap="memberEdit">修改</button>
+    <button class="bg-red text-white p-3 box__delete" bindtap="memberDel">删除</button>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+/* components/staring/staring.wxss */
+.flex-row{
+  display: flex;
+  align-items: center;
+}
+.star{
+  width: 54rpx;
+  height: 54rpx;
+  margin-right: 30rpx;
+}
+.rating_text{
+  font-size: 24rpx;
+  color: #666;
+}

@@ -1,0 +1,21 @@
+/* pages/index/property-service/online-repairs/records/records.wxss */
+.records {
+  background: #FFF;
+  width: 94%;
+  // height: 100%;
+  margin: auto;
+  line-height: 2;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+  &__status {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    color: orange;
+  }
+  &__img {
+    width: 300rpx;
+    height: 300rpx;
+  }
+}

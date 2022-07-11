@@ -1,0 +1,11 @@
+<view class="cu-list menu-avatar">
+    <view class="cu-item">
+        <view class="cu-avatar round lg img"></view>
+        <view class="content flex-sub">
+            <view>EthanJiao</view>
+            <view class="text-gray text-sm flex justify-between">
+                2022年5月13日
+            </view>
+        </view>
+    </view>
+</view>

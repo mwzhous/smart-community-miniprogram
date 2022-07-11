@@ -1,0 +1,45 @@
+
+.container {
+  display: flex;
+  height: 430rpx;
+  background-color: #fff;
+  margin: 12px;
+  flex-wrap: wrap; 
+  padding: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+
+  &__card {
+    height: 180rpx;
+    width: 33.33333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+      width: 100rpx;
+      height: 100rpx;
+    }
+
+    &__text {
+      font-size: 30rpx;
+      margin-top: 15rpx;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  bottom: 15rpx;
+  left: 0;
+  right: 0;
+}
+
+.btn1 {
+  position: absolute;
+  bottom: 130rpx;
+  left: 0;
+  right: 0;
+}
+

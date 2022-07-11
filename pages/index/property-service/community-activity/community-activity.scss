@@ -1,0 +1,17 @@
+/* pages/index/property-service/community-activity/community-activity.wxss */
+.act {
+  display: flex;
+  width: 92%;
+  height: 140rpx;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  line-height: 1;
+  position: relative;
+	background-color: white;
+  justify-content: space-between;
+}
+.tim {
+  width: 100%;
+  position: absolute;
+  bottom: 20rpx;
+}

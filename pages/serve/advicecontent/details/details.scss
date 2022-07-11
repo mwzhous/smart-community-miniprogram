@@ -1,0 +1,45 @@
+/* pages/serve/advicecontent/details/details.wxss */
+.detail {
+  background-color: #fff;
+  height: 100%;
+  width: 95vw;
+  margin: 22rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  position: relative;
+  &__time {
+    justify-content: space-between;
+  }
+
+  &__status {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    color: orange;
+  }
+
+  &__img {
+    width: 300rpx;
+    height: 300rpx;
+    padding: 10rpx;
+  }
+
+  &__revert{
+    height: 200rpx;
+    margin: 20rpx;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    background-color: rgb(230, 230, 230);
+
+    &__back {
+      color: gray;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    width: 40% !important;
+    font-size: 30rpx;
+    margin-right: 2% !important;
+  }
+}
